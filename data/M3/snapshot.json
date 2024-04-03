@@ -1,6 +1,6 @@
 {
-"date": "2024-03-28",
-"revision": "28cc363411",
+"date": "2024-04-02",
+"revision": "d7c5387a43",
 "data": [
 {
 "file": "en-US/browser/branding/official/brand.ftl",
@@ -248,7 +248,7 @@
 },
 {
 "file": "en-US/browser/browser/preferences/preferences.ftl",
-"count": 517
+"count": 520
 },
 {
 "file": "en-US/browser/browser/preferences/selectBookmark.ftl",
@@ -948,7 +948,7 @@
 },
 {
 "file": "en-US/toolkit/toolkit/about/aboutReader.ftl",
-"count": 18
+"count": 31
 },
 {
 "file": "en-US/toolkit/toolkit/about/aboutRights.ftl",
@@ -1108,7 +1108,7 @@
 },
 {
 "file": "en-US/toolkit/toolkit/global/processTypes.ftl",
-"count": 22
+"count": 23
 },
 {
 "file": "en-US/toolkit/toolkit/global/profileDowngrade.ftl",
