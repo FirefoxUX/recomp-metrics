@@ -1,6 +1,6 @@
 {
-"date": "2024-04-02",
-"revision": "d7c5387a43",
+"date": "2024-04-03",
+"revision": "5df192b9ed",
 "data": [
 {
 "file": "en-US/browser/branding/official/brand.ftl",
@@ -248,7 +248,7 @@
 },
 {
 "file": "en-US/browser/browser/preferences/preferences.ftl",
-"count": 520
+"count": 519
 },
 {
 "file": "en-US/browser/browser/preferences/selectBookmark.ftl",
@@ -900,7 +900,7 @@
 },
 {
 "file": "en-US/toolkit/crashreporter/crashreporter.ftl",
-"count": 32
+"count": 33
 },
 {
 "file": "en-US/toolkit/services/accounts.ftl",
@@ -1008,7 +1008,7 @@
 },
 {
 "file": "en-US/toolkit/toolkit/contentanalysis/contentanalysis.ftl",
-"count": 20
+"count": 22
 },
 {
 "file": "en-US/toolkit/toolkit/downloads/downloadUI.ftl",
