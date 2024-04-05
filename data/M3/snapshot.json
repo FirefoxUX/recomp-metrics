@@ -1,6 +1,6 @@
 {
-"date": "2024-04-03",
-"revision": "5df192b9ed",
+"date": "2024-04-04",
+"revision": "46dae93473",
 "data": [
 {
 "file": "en-US/browser/branding/official/brand.ftl",
@@ -296,11 +296,7 @@
 },
 {
 "file": "en-US/browser/browser/screenshots.ftl",
-"count": 33
-},
-{
-"file": "en-US/browser/browser/screenshotsOverlay.ftl",
-"count": 5
+"count": 41
 },
 {
 "file": "en-US/browser/browser/search.ftl",
