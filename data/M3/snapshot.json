@@ -1,6 +1,6 @@
 {
-"date": "2024-04-04",
-"revision": "46dae93473",
+"date": "2024-04-05",
+"revision": "58af8319f5",
 "data": [
 {
 "file": "en-US/browser/branding/official/brand.ftl",
@@ -368,7 +368,7 @@
 },
 {
 "file": "en-US/browser/browser/webProtocolHandler.ftl",
-"count": 10
+"count": 4
 },
 {
 "file": "en-US/browser/browser/webauthnDialog.ftl",
