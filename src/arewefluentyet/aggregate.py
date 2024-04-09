@@ -2,9 +2,7 @@ import argparse
 from datetime import date, timedelta
 import os
 
-from milestone1 import Milestone1
-from milestone2 import Milestone2
-from milestone3 import Milestone3
+from recomp_components import RecompComponents
 from source import GitSource, HgSource, Source
 
 PARAMS = {
@@ -12,7 +10,7 @@ PARAMS = {
     "dry_run": False,
 }
 
-Milestones = list[Milestone1 | Milestone2 | Milestone3]
+Milestones = list[RecompComponents]
 
 
 def get_next_date(milestones: Milestones):
@@ -48,6 +46,7 @@ def update_milestones_for_revision(
             continue
 
         (progress_entry, snapshot) = result
+        print(progress_entry)
         milestone.append_progress_entry(progress_entry)
         if PARAMS["dry_run"]:
             print(f"   - {milestone.name}: Not writing (dry run)")
@@ -135,15 +134,9 @@ def set_milestones(parser: argparse.ArgumentParser, args):
     milestone_args = args.milestone
 
     result: Milestones = []
-    if "M1" in milestone_args or "all" in milestone_args:
-        verify_milestone_paths(parser, args.gh_pages_data, "M1")
-        result.append(Milestone1(args.gh_pages_data))
-    if "M2" in milestone_args or "all" in milestone_args:
-        verify_milestone_paths(parser, args.gh_pages_data, "M2")
-        result.append(Milestone2(args.gh_pages_data))
-    if "M3" in milestone_args or "all" in milestone_args:
-        verify_milestone_paths(parser, args.gh_pages_data, "M3")
-        result.append(Milestone3(args.gh_pages_data))
+    if "RC" in milestone_args or "all" in milestone_args:
+        verify_milestone_paths(parser, args.gh_pages_data, "RC")
+        result.append(RecompComponents(args.gh_pages_data))
     return result
 
 
@@ -153,7 +146,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', '--milestone',
                         required=True,
                         action='append',
-                        choices=['M1', 'M2', 'M3', 'all'],
+                        choices=['RC', 'all'],
                         help='Comma-separated list of milestones to accumulate')
     parser.add_argument('--use-current-revision',
                         action='store_true',
