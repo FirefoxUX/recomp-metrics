@@ -1,0 +1,36 @@
+[
+{
+"data": {
+"moz-button": 50,
+"moz-button-group": 36,
+"moz-card": 6,
+"moz-five-star": 7,
+"moz-label": 10,
+"moz-message-bar": 27,
+"moz-page-nav": 16,
+"moz-support-link": 93,
+"moz-toggle": 18,
+"named-deck": 16,
+"panel-list": 40
+},
+"date": "2024-04-09",
+"revision": "643848d855ebb8ab8d9d7009ca7ce9d21d267b34"
+},
+{
+"data": {
+"moz-button": 50,
+"moz-button-group": 36,
+"moz-card": 6,
+"moz-five-star": 7,
+"moz-label": 10,
+"moz-message-bar": 27,
+"moz-page-nav": 16,
+"moz-support-link": 93,
+"moz-toggle": 18,
+"named-deck": 16,
+"panel-list": 40
+},
+"date": "2024-01-12",
+"revision": "2ea989327044a13eef664752ec11bc84271a13e7"
+}
+]
