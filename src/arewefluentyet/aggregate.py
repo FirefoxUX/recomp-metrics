@@ -136,7 +136,7 @@ def set_milestones(parser: argparse.ArgumentParser, args):
     result: Milestones = []
     if "RC" in milestone_args or "all" in milestone_args:
         verify_milestone_paths(parser, args.gh_pages_data, "RC")
-        result.append(RecompComponents(args.gh_pages_data))
+        result.append(RecompComponents(args.gh_pages_data, args.mc))
     return result
 
 
