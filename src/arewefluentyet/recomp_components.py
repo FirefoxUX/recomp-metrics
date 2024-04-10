@@ -1,11 +1,14 @@
 import os
 import subprocess
+import re
 from collections import defaultdict
 from datetime import date
 
 from data import Aggregator
 from source import Source
 from milestone import Milestone
+
+from pathlib import Path
 
 
 class RecompComponents(Milestone):
@@ -30,15 +33,23 @@ class RecompComponents(Milestone):
         progress = {}
 
         for component in component_names:
-            print(component)
-            query = f"rg 'document\.createElement\(\"{component}\"\)|<{component}|<html:{component}|is=\"{component}\"|is: \"{component}\"' ../gecko-dev --count"
-            print(query)
-            output = subprocess.run([query], capture_output=True, encoding="ascii", shell=True)
+            mozilla_central_dir = os.path.abspath(self.mozilla_source)
+            query = f'document\.createElement\(\"{component}\"\)|<{component}|<html:{component}|is=\"{component}\"|is: \"{component}\"'
+            print("Searching for:", query)
+  
+            command = ['rg', query, mozilla_central_dir, "--count"]
+            output = subprocess.run(command, capture_output=True, encoding="ascii", shell=True)
             print(output.stdout, output.stderr)
 
             for line in output.stdout.split("\n"):
                 if not line:
                     continue
+                # Ensure that Windows path results from ripgrep
+                # are in UNIX style
+                unix_line = Path(line)
+                unix_line = unix_line.as_posix()
+                line = unix_line
+                line = re.split(self.mozilla_source, line)[-1]
                 path, count = line.split(":")
                 if component not in progress:
                     progress[component] = 0
