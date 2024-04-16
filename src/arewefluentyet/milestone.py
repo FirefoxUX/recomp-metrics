@@ -11,9 +11,10 @@ class Milestone:
     name: str = None  # type: ignore
     start_date: date = None  # type: ignore
 
-    def __init__(self, data_path):
+    def __init__(self, data_path, mozilla_source):
         self.data_path = os.path.join(data_path, self.name)
         self.progress_data = None
+        self.mozilla_source = mozilla_source
 
     def append_progress_entry(self, progress_entry):
         progress_data = self.get_progress_data()

@@ -1,11 +1,14 @@
 import os
 import subprocess
+import re
 from collections import defaultdict
 from datetime import date
 
 from data import Aggregator
 from source import Source
 from milestone import Milestone
+
+from pathlib import Path
 
 
 class RecompComponents(Milestone):
@@ -28,17 +31,34 @@ class RecompComponents(Milestone):
         ]
         entries = {}
         progress = {}
-
+        # Ensure the mozilla-central arg has the trailing directory separator
+        # so that the line splitting later works as expected on Windows
+        # and Unix
+        if self.mozilla_source[-1] != "/":
+            self.mozilla_source = self.mozilla_source + "/"
         for component in component_names:
-            print(component)
-            query = f"rg 'document\.createElement\(\"{component}\"\)|<{component}|<html:{component}|is=\"{component}\"|is: \"{component}\"' ../gecko-dev --count"
-            print(query)
-            output = subprocess.run([query], capture_output=True, encoding="ascii", shell=True)
+            mozilla_central_dir = os.path.abspath(self.mozilla_source)
+            query = f'document\.createElement\(\"{component}\"\)|<{component}|<html:{component}|is=\"{component}\"|is: \"{component}\"'
+            print("Searching for:", query)
+  
+            command = ['rg', query, mozilla_central_dir, "--count"]
+            output = subprocess.run(command, capture_output=True, encoding="ascii")
             print(output.stdout, output.stderr)
 
             for line in output.stdout.split("\n"):
                 if not line:
                     continue
+                # Ensure that Windows path results from ripgrep
+                # are in UNIX style
+                unix_line = Path(line)
+                has_root = True if unix_line.root == "/" else False
+                unix_line = unix_line.as_posix()
+                if has_root:
+                    sorted_files = list(unix_line)
+                    sorted_files[0] = ""
+                    unix_line = "".join(sorted_files)
+                line = unix_line
+                line = re.split(self.mozilla_source, line)[-1]
                 path, count = line.split(":")
                 if component not in progress:
                     progress[component] = 0
@@ -48,26 +68,8 @@ class RecompComponents(Milestone):
 
         return (entries, progress)
 
-    def old_get_data(self, source: Source, date, revision):
-        component_names = ["moz-toggle", "moz-message-bar"]
-        entries = {}
-        progress = {}
-
-        for component_name in component_names:
-            output = subprocess.run([f"rg \<{component_name} ../gecko-dev/browser ../gecko-dev/toolkit --count"], capture_output=True, encoding="ascii", shell=True)
-
-            for line in output.stdout.split("\n"):
-                if not line:
-                    continue
-                path, count = line.split(":")
-                if component_name not in progress:
-                    progress[component_name] = 0
-                    entries[component_name] = []
-                progress[component_name] += int(count)
-                entries[component_name].append({path: int(count)})
-        return (entries, progress)
-
     def extract_progress(self, dataset: list[dict[str, int]]):
+
         entries: list[dict[str, str | int]] = []
         progress: defaultdict[str, int] = defaultdict(int)
 
