@@ -1,0 +1,7 @@
+*.stories.mjs
+*.stories.md
+*.css
+*.orig
+*.rej
+tests/
+test/
