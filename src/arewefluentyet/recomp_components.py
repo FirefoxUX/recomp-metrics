@@ -38,10 +38,10 @@ class RecompComponents(Milestone):
             self.mozilla_source = self.mozilla_source + "/"
         for component in component_names:
             mozilla_central_dir = os.path.abspath(self.mozilla_source)
-            query = f'document\.createElement\(\"{component}\"\)|<{component}|<html:{component}|is=\"{component}\"|is: \"{component}\"'
+            query = f'document\\.createElement\\(\"{component}\"\\)|<{component}(?!-)|<html:{component}(?!-)|is=\"{component}\"|is: \"{component}\"'
             print("Searching for:", query)
   
-            command = ['rg', query, mozilla_central_dir, "--count"]
+            command = ['rg', query, mozilla_central_dir, "--count", "--pcre2"]
             output = subprocess.run(command, capture_output=True, encoding="ascii")
             print(output.stdout, output.stderr)
 
