@@ -40,8 +40,10 @@ class RecompComponents(Milestone):
             mozilla_central_dir = os.path.abspath(self.mozilla_source)
             query = f'document\\.createElement\\(\"{component}\"\\)|<{component}(?!-)|<html:{component}(?!-)|is=\"{component}\"|is: \"{component}\"'
             print("Searching for:", query)
-  
-            command = ['rg', query, mozilla_central_dir, "--count", "--pcre2"]
+
+            browser = os.path.join(mozilla_central_dir, "browser")
+            toolkit = os.path.join(mozilla_central_dir, "toolkit")
+            command = ['rg', query, browser, toolkit, "--count", "--pcre2", "--ignore-file", "recomp-ignore"]
             output = subprocess.run(command, capture_output=True, encoding="ascii")
             print(output.stdout, output.stderr)
 
