@@ -2,7 +2,7 @@ import os
 import subprocess
 import re
 from collections import defaultdict
-from datetime import date
+from datetime import date, timedelta
 
 from data import Aggregator
 from source import Source
@@ -10,10 +10,9 @@ from milestone import Milestone
 
 from pathlib import Path
 
-
 class RecompComponents(Milestone):
     name = "RC"
-    start_date = date(2024, 1, 1)
+    start_date = date(2022, 8, 1)
 
     def get_data(self, source: Source, date, revision):
         component_names=[
