@@ -5,38 +5,30 @@ const activeMilestone = new URL(document.location).searchParams.get(
 const State = {
   milestones: [
     {
-      code: "M1",
-      name: "browser.xhtml",
-      title: "Strings loaded in browser.xhtml",
-      categories: ["dtd", "ftl"],
-      skipInDashboard: [],
-      categoriesBar: [null, 1],
-      columns: ["order", "type", "id"],
-      columnSort: [0, "asc"],
-    },
-    {
-      code: "M2",
-      name: "startup",
-      title: "Strings loaded during startup",
-      categories: ["dtd", "properties", "ftl"],
-      skipInDashboard: [],
-      categoriesBar: [0, 2],
-      columns: ["order", "type", "id", "stack"],
-      columnSort: [0, "asc"],
-    },
-    {
-      code: "M3",
+      code: "RC",
       name: "mozilla-central",
-      title: "Strings available in mozilla-central",
-      categories: ["ini", "inc", "dtd", "properties", "ftl"],
-      skipInDashboard: ["ini", "inc"],
-      categoriesBar: [2, 4],
-      columns: ["type", "file", "count"],
-      columnSort: [5, "desc"],
+      title: "Reusable Components usage",
+      categories: [
+        "moz-button",
+        "moz-button-group",
+        "moz-card",
+        "moz-five-star",
+        "moz-label",
+        "moz-message-bar",
+        "moz-page-nav",
+        "moz-support-link",
+        "moz-toggle",
+        "named-deck",
+        "panel-list",
+      ],
+      columns: ["file", "count"],
+      skipInDashboard: [],
+      categoriesBar: [0, 10],
+      monthIntervals: 6,
     },
   ],
-  currentMilestone: "M3",
-  activeMilestone: activeMilestone || "M3",
+  currentMilestone: "RC",
+  activeMilestone: activeMilestone || "RC",
 };
 
 const Page = {
@@ -92,19 +84,6 @@ function normalizePath(path) {
   return path.substring(idx + 6);
 }
 
-function getEntryType(entry) {
-  if (entry.type) {
-    return entry.type;
-  }
-  return getTypeFromPath(entry.file);
-}
-
-function getEntryFile(entry) {
-  if (entry.file) {
-    return getLinkForPath(normalizePath(entry.file));
-  }
-  return "";
-}
 
 function getIdPath(entry) {
   if (entry.id) {
@@ -115,34 +94,9 @@ function getIdPath(entry) {
 
 const twoPartModules = ["devtools", "security"];
 
-function getLinkForPath(path) {
-  let [mod] = path.split("/", 1);
-  let moduleChunks = twoPartModules.includes(mod) ? 2 : 1;
-  let module = path.split("/", moduleChunks).join("/");
-  let rest = path.substr(module.length + 1);
-  let sfPath = `https://searchfox.org/mozilla-central/source/${module}/locales/en-US/${rest}`;
-  return `<a href="${sfPath}">${path}</a>`;
-}
-
-function getLinkForId(id) {
-  let sfPath = `https://searchfox.org/mozilla-central/search?q=${id}&case=true`;
-  return `<a href="${sfPath}">${id}</a>`;
-}
-
-function getTypeFromPath(path) {
-  if (path.endsWith(".properties")) {
-    return "properties";
-  } else if (path.endsWith(".ftl")) {
-    return "ftl";
-  } else if (path.endsWith(".dtd")) {
-    return "DTD";
-  } else if (path.endsWith(".ini")) {
-    return "ini";
-  } else if (path.endsWith(".inc")) {
-    return "inc";
-  } else {
-    throw new Error(`Unknown type for ${path}`);
-  }
+function getLinkForFile(file) {
+  let sfPath = `https://searchfox.org/mozilla-central/source/${file}`;
+  return `<a href="${sfPath}">${file}</a>`;
 }
 
 function prepareData(data) {
@@ -152,17 +106,17 @@ function prepareData(data) {
     order: null,
   };
 
-  let i = 0;
-  for (let entry of data) {
-    result.data.push({
-      order: entry.order || i,
-      type: getEntryType(entry),
-      file: getEntryFile(entry),
-      stack: formatStack(entry.stack),
-      count: entry.count || 1,
-      id: getIdPath(entry),
-    });
-    i++;
+  for (let [component, references] of Object.entries(data)) {
+    let componentData = Object.entries(references).map(
+      ([file, occurrences], i) => ({
+        order: i,
+        type: component,
+        file: getLinkForId(file.replace("../gecko-dev/", "")),
+        count: occurrences || 1,
+        id: getIdPath(file),
+      })
+    );
+    result.data.push({ component, data: componentData });
   }
 
   let activeMilestone = Page.getActiveMilestone();
@@ -188,11 +142,6 @@ function prepareData(data) {
       visible: activeMilestone.columns.includes("file"),
     },
     {
-      title: "Stack",
-      data: "stack",
-      visible: activeMilestone.columns.includes("stack"),
-    },
-    {
       title: "Count",
       data: "count",
       visible: activeMilestone.columns.includes("count"),
@@ -204,11 +153,24 @@ function prepareData(data) {
 
 $(document).ready(async function () {
   let { data, columns, order } = await loadFile();
-  $("#example").DataTable({
-    data,
-    columns,
-    order,
-    pageLength: 25,
-    destroy: true,
+  let tableTemplate = document.getElementById("table-template");
+  let tableContainer = document.getElementById("table-container");
+
+  data.forEach(({ component, data }, i) => {
+    let table = tableTemplate.cloneNode(true);
+    table.id = `data-table-${i}`;
+    tableContainer.appendChild(table);
+
+    let tableHeading = document.createElement("h2");
+    tableHeading.innerText = `${component}`;
+    table.before(tableHeading);
+    $(table).DataTable({
+      data,
+      columns,
+      order,
+      destroy: true,
+      searching: false, 
+      paging: false
+    });
   });
 });

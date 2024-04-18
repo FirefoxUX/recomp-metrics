@@ -119,9 +119,11 @@ async function prepare_data(url) {
 
   let datasets = [];
   let barCategories = getBarCategories(null, 1);
-  for (category of Page.getCategories()) {
+  let categories = Page.getCategories();
+  for (category of categories) {
+    // Only build and display the tooltip for the last component.
     let datalabels =
-      State.dashboard || category !== "ftl"
+      State.dashboard || category !== categories[categories.length - 1]
         ? { display: false }
         : {
             display: function (context) {
@@ -132,14 +134,14 @@ async function prepare_data(url) {
             offset: function (t) {
               let index = t.dataIndex;
 
-              let idx = Page.getCategories().indexOf("ftl");
+              let idx = categories.indexOf(category);
               let meta = t.chart.getDatasetMeta(idx);
-              let ftlY = meta.data[index]._model.y;
+              let indexY = meta.data[index]._model.y;
 
               let [[x, y], [x2, y2]] = getBarPosition(t.chart, index);
               let distance = Math.abs(y2 - y);
-              var boxHeight = (Page.getCategories().length + 1) * 22.4;
-              let value = Math.round(y - ftlY - distance / 2 - boxHeight / 2);
+              var boxHeight = (categories.length + 1) * 22.4;
+              let value = Math.round(y - indexY - distance / 2 - boxHeight / 2);
               return value;
             },
             backgroundColor: State.theme.datalabels.background,
@@ -166,7 +168,7 @@ async function prepare_data(url) {
               });
               result += "\n";
               let values = [];
-              for (let category of Page.getCategories()) {
+              for (let category of categories) {
                 if (!categoriesWithData.has(category)) {
                   continue;
                 }
