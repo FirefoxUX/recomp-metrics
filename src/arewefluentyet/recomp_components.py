@@ -39,14 +39,21 @@ class RecompComponents(Milestone):
         for component in component_names:
             mozilla_central_dir = os.path.abspath(self.mozilla_source)
             query = f'document\\.createElement\\(\"{component}\"\\)|<{component}(?!-)|<html:{component}(?!-)|is=\"{component}\"|is: \"{component}\"'
+            comment_query = '(?:\*|\/\/)([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*'
             print("Searching for:", query)
 
             browser = os.path.join(mozilla_central_dir, "browser")
             toolkit = os.path.join(mozilla_central_dir, "toolkit")
-            command = ['rg', query, browser, toolkit, "--count", "--pcre2", "--ignore-file", "recomp-ignore"]
-            output = subprocess.run(command, capture_output=True, encoding="ascii")
-            print(output.stdout, output.stderr)
-
+            ignore_file = os.path.abspath(os.path.join(__file__, "../../../", "recomp-ignore"))
+  
+            # First, find all instances of the component, then get rid of
+            # matches that have a comment in them
+            command = ['rg', query, browser, toolkit, '--pcre2', "--ignore-file", ignore_file]
+            comment_command = ['rg', comment_query, '-v', '--pcre2']
+            initial_rg = subprocess.Popen((command), stdout=subprocess.PIPE)
+            output = subprocess.run((comment_command), capture_output=True, encoding="ascii", stdin=initial_rg.stdout)
+            initial_rg.wait()
+            print(output.stdout)
             for line in output.stdout.split("\n"):
                 if not line:
                     continue
@@ -61,12 +68,16 @@ class RecompComponents(Milestone):
                     unix_line = "".join(sorted_files)
                 line = unix_line
                 line = re.split(self.mozilla_source, line)[-1]
-                path, count = line.split(":")
+                path, _ = line.split(":", 1)
                 if component not in progress:
                     progress[component] = 0
                     entries[component] = {}
-                progress[component] += int(count)
-                entries[component][path] = int(count)
+                # Now that ripgrep is outputting a single match per line
+                # we can just += 1 to the counts
+                progress[component] += 1
+                if path not in entries[component]:
+                    entries[component][path] = 0
+                entries[component][path] += 1
 
         return (entries, progress)
 
