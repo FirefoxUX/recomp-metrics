@@ -48,7 +48,7 @@ class RecompComponents(Milestone):
   
             # First, find all instances of the component, then get rid of
             # matches that have a comment in them
-            command = ['rg', query, browser, toolkit, '--pcre2', "--ignore-file", ignore_file]
+            command = ['rg', query, browser, toolkit, '--pcre2', "--ignore-file", ignore_file, "--iglob", f"!{component}.*"]
             comment_command = ['rg', comment_query, '-v', '--pcre2']
             initial_rg = subprocess.Popen((command), stdout=subprocess.PIPE)
             output = subprocess.run((comment_command), capture_output=True, encoding="ascii", stdin=initial_rg.stdout)
