@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset="utf8" />
+<html>
+  <head>
+    <title>Firefox Reusable Component Usage</title>
+    <link rel="stylesheet" href="./style/theme.css" />
+    <link rel="stylesheet" href="./style/awfy.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <script defer src="./js/helpers.js"></script>
+    <script defer src="./js/app.js"></script>
+    <script defer src="./js/data.js"></script>
+    <script defer src="./js/chart.js"></script>
+    <script defer src="./vendor/Chart.bundle.min.js"></script>
+    <script defer src="./vendor/chartjs-plugin-datalabels.js"></script>
+    <script defer src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <h1>Reusable Component Adoption</h1>
+    <div id="main">
+      <div id="milestones">
+        <div class="desc-box">
+          <table>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="main-chart">
+        <canvas></canvas>
+      </div>
+      <div id="link-desc" class="desc-box">
+        <a id="list-link" href="list.html">
+          Detailed view of the latest snapshot
+        </a>
+      </div>
+      <div id="side">
+        <div id="legend">
+          <p>
+            <span class="icon fluent"></span><span class="label">Fluent</span>
+          </p>
+          <p>
+            <span class="icon prop"></span><span class="label">Properties</span>
+          </p>
+          <p><span class="icon dtd"></span><span class="label">DTD</span></p>
+        </div>
+      </div>
+      <footer id="footer">
+        <div id="desc" class="desc-box">
+          <h2>Reusable components in Firefox</h2>
+          <p>
+            Reusable components are web components that have been built to
+            address the issue of having multiple implementations of common UI
+            patterns that get used across Firefox desktop.
+          </p>
+          <p>
+            These components serve to encapsulate our design system, ensure
+            accessibility and usability across the application, and reduce tech
+            debt.
+          </p>
+          <p>
+            You can learn more by
+            <a
+              href="https://firefox-source-docs.mozilla.org/browser/components/storybook/docs/README.reusable-widgets.stories.html"
+              target="_blank"
+            >
+              reading our docs</a
+            >, or checking out our
+            <a
+              href="https://firefoxux.github.io/firefox-desktop-components"
+              target="_blank"
+            >
+              Storybook instance</a
+            >.
+          </p>
+        </div>
+        <div id="desc2" class="desc-box">
+          <h2>About this dashboard</h2>
+          <p>
+            This is a very early prototype. We're planning to automate the data
+            collection and present other useful information in the coming
+            months. Please submit feedback and ideas on
+            <a href="https://github.com/FirefoxUX/recomp-metrics">GitHub</a>.
+          </p>
+          <p>
+            If you have questions or comments about reusable components in
+            general, feel free to reach out on our
+            <a
+              href="https://matrix.to/#/#reusable-components:mozilla.org"
+              target="_blank"
+              >Matrix channel</a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
