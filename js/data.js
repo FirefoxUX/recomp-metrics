@@ -34,11 +34,14 @@ async function prepare_data(url) {
     }
     let new_label = new Date(date);
     all_labels.push(new_label);
-    for (let [format, count] of Object.entries(snapshot)) {
-      if (all_points.hasOwnProperty(format)) {
-        all_points[format].push(count);
+    
+    let snapshotEntries = new Map(Object.entries(snapshot))
+    for (let category of Page.getCategories()) {
+      let count = snapshotEntries.get(category) ?? 0;
+      if (all_points.hasOwnProperty(category)) {
+        all_points[category].push(count);
       } else {
-        all_points[format] = [count];
+        all_points[category] = [count];
       }
     }
 
