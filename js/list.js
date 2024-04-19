@@ -85,9 +85,9 @@ function normalizePath(path) {
 }
 
 
-function getIdPath(entry) {
-  if (entry.id) {
-    return getLinkForId(entry.id);
+function getIdPath(file) {
+  if (file) {
+    return getLinkForFile(file);
   }
   return "";
 }
@@ -96,7 +96,7 @@ const twoPartModules = ["devtools", "security"];
 
 function getLinkForFile(file) {
   let sfPath = `https://searchfox.org/mozilla-central/source/${file}`;
-  return `<a href="${sfPath}">${file}</a>`;
+  return `<a href="${sfPath}" target="_blank">${file}</a>`;
 }
 
 function prepareData(data) {
@@ -111,7 +111,7 @@ function prepareData(data) {
       ([file, occurrences], i) => ({
         order: i,
         type: component,
-        file: getLinkForId(file.replace("../gecko-dev/", "")),
+        file: getLinkForFile(file.replace("../gecko-dev/", "")),
         count: occurrences || 1,
         id: getIdPath(file),
       })
