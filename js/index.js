@@ -46,7 +46,7 @@ async function main() {
   let ms = Page.getActiveMilestone();
   let chart = create_chart(
     "#main-chart > canvas",
-    await prepare_data(`./data/${ms.code}/progress.json`)
+    await prepare_data(`./data/RC/progress.json`)
   );
   State.charts.push(chart);
 

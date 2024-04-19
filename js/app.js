@@ -57,17 +57,17 @@ const State = {
         "panel-list": "salmon",
       },
       labels: {
-            "moz-button": "moz-button",
-            "moz-button-group": "moz-button-group",
-            "moz-card": "moz-card",
-            "moz-five-star": "moz-five-star",
-            "moz-label": "moz-label",
-            "moz-message-bar": "moz-message-bar",
-            "moz-page-nav": "moz-page-nav",
-            "moz-support-link": "moz-support-link",
-            "moz-toggle": "moz-toggle",
-            "named-deck": "named-deck",
-            "panel-list": "panel-list",
+        "moz-button": "moz-button",
+        "moz-button-group": "moz-button-group",
+        "moz-card": "moz-card",
+        "moz-five-star": "moz-five-star",
+        "moz-label": "moz-label",
+        "moz-message-bar": "moz-message-bar",
+        "moz-page-nav": "moz-page-nav",
+        "moz-support-link": "moz-support-link",
+        "moz-toggle": "moz-toggle",
+        "named-deck": "named-deck",
+        "panel-list": "panel-list",
       },
     },
     axes: {
@@ -164,7 +164,7 @@ const Page = {
     for (let idx in State.milestones) {
       let milestone = State.milestones[idx];
       if (!State.milestonesStatus[idx]) {
-        let response = await fetch(`./data/${milestone.code}/snapshot.json`);
+        let response = await fetch(`./data/RC/snapshot.json`);
         let data = response.status == 200 ? await response.json() : null;
 
         if (!data) {
