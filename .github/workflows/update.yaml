@@ -14,6 +14,7 @@ jobs:
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
           . "$HOME/.cargo/env" 
           cargo install ripgrep
+          rg -V
       - name: Checkout main branch
         uses: actions/checkout@v3
       - name: Checkout gh-pages branch
@@ -33,10 +34,9 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Generate new data
-        run: >
-          python src/arewefluentyet/aggregate.py
-          --mc ./gecko-dev --git --gh-pages-data gh-pages/data
-          -m RC --use-current-revision
+        run: |
+          rg -V
+          python src/arewefluentyet/aggregate.py --mc ./gecko-dev --git --gh-pages-data gh-pages/data -m RC --use-current-revision
       - name: Update gh-pages branch
         run: |
           git config user.name github-actions
