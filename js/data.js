@@ -2,6 +2,14 @@ async function prepare_data(url) {
   let response = await fetch(url);
   let snapshots = response.status == 200 ? await response.json() : [];
 
+  // Actually grabbing second to last - last is empty.
+  let lastSnapshot = snapshots[snapshots.length - 2].data;
+  // Sort the categories based on usage to show most used at the bottom.
+  let sortedComponents = Object.keys(lastSnapshot).sort(
+    (a, b) => lastSnapshot[b] - lastSnapshot[a]
+  );
+  State.milestones[0].categories = sortedComponents;
+
   let all_labels = [];
   let all_points = {
     bar: [],
@@ -24,7 +32,8 @@ async function prepare_data(url) {
 
   for (let { date, data } of snapshots) {
     i += 1;
-    let total = Object.values(data).reduce((a, b) => a + b);
+
+    let total = Object.values(data)?.reduce((a, b) => a + b, 0);
     let snapshot = data;
 
     for (let [extension, count] of Object.entries(data)) {
@@ -34,8 +43,8 @@ async function prepare_data(url) {
     }
     let new_label = new Date(date);
     all_labels.push(new_label);
-    
-    let snapshotEntries = new Map(Object.entries(snapshot))
+
+    let snapshotEntries = new Map(Object.entries(snapshot));
     for (let category of Page.getCategories()) {
       let count = snapshotEntries.get(category) ?? 0;
       if (all_points.hasOwnProperty(category)) {
@@ -123,7 +132,7 @@ async function prepare_data(url) {
   let datasets = [];
   let barCategories = getBarCategories(null, 1);
   let categories = Page.getCategories();
-  for (category of categories) {
+  categories.forEach(function (category, index) {
     // Only build and display the tooltip for the last component.
     let datalabels =
       State.dashboard || category !== categories[categories.length - 1]
@@ -187,7 +196,8 @@ async function prepare_data(url) {
     datasets.push({
       type: "line",
       label: State.theme.categories.labels[category],
-      backgroundColor: State.theme.categories.colors[category],
+      backgroundColor: State.theme.categories.colors[index],
+      greyBackgroundColor: State.theme.categories.greyTones[index],
       borderWidth: 0,
       borderColor: "rgb(0,0,0,0)",
       yAxisID: "main-y-axis",
@@ -198,7 +208,7 @@ async function prepare_data(url) {
       pointHoverRadius:
         State.dashboard || !barCategories.includes(category) ? 0 : 4,
     });
-  }
+  });
 
   if (State.dashboard) {
     if (Page.getCategoriesBar()[0] === null) {
@@ -221,14 +231,13 @@ async function prepare_data(url) {
       });
     }
     let barCategories = getBarCategories();
-    for (let idx in Page.getCategories()) {
-      let category = Page.getCategories()[idx];
+    Page.getCategories().forEach(function(category, index) {
       let inBar = barCategories.includes(category);
       datasets.push({
         type: "line",
         label: `${category} Dots`,
         backgroundColor: inBar
-          ? State.theme.categories.colors[category]
+          ? State.theme.categories.colors[index]
           : "rgba(0,0,0,0)",
         borderWidth: inBar ? State.theme.points.border.width : 0,
         borderColor: State.theme.points.color,
@@ -244,7 +253,7 @@ async function prepare_data(url) {
           display: false,
         },
       });
-    }
+    });
 
     let aligns = ["right"];
     for (let i = 0; i < month_labels.length - 2; i++) {

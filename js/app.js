@@ -3,6 +3,43 @@ const activeMilestone = new URL(document.location).searchParams.get(
   "milestone"
 );
 
+// Takes a color hex value and returns a grey tone.
+function generateGreyTone(color) {
+  // Remove '#' if present
+  let hex = color.replace("#", "");
+
+  // Parse hex into RGB
+  var r = parseInt(hex.substring(0, 2), 16);
+  var g = parseInt(hex.substring(2, 4), 16);
+  var b = parseInt(hex.substring(4, 6), 16);
+
+  // Calculate average
+  var avg = Math.round((r + g + b) / 3);
+
+  // Convert average to hex
+  var greyHex = avg.toString(16).padStart(2, "0");
+
+  // Return grey hex value
+  return "#" + greyHex + greyHex + greyHex;
+}
+
+let colors = [
+  "#F9CDAC",
+  "#F3ACA2",
+  "#EE8B97",
+  "#E96A8D",
+  "#DB5087",
+  "#B8428C",
+  "#973490",
+  "#742796",
+  "#5E1F88",
+  "#4D1A70",
+  "#3D1459",
+  "#2D0F41",
+];
+
+let greyTones = colors.map(generateGreyTone);
+
 const State = {
   milestones: [
     {
@@ -10,17 +47,17 @@ const State = {
       name: "mozilla-central",
       title: "Reusable Components usage",
       categories: [
-            "moz-button",
-            "moz-button-group",
-            "moz-card",
-            "moz-five-star",
-            "moz-label",
-            "moz-message-bar",
-            "moz-page-nav",
-            "moz-support-link",
-            "moz-toggle",
-            "named-deck",
-            "panel-list",
+        "moz-button",
+        "moz-button-group",
+        "moz-card",
+        "moz-five-star",
+        "moz-label",
+        "moz-message-bar",
+        "moz-page-nav",
+        "moz-support-link",
+        "moz-toggle",
+        "named-deck",
+        "panel-list",
       ],
       skipInDashboard: [],
       categoriesBar: [0, 10],
@@ -43,19 +80,8 @@ const State = {
       background: "white",
     },
     categories: {
-      colors: {
-        "moz-button": "red",
-        "moz-button-group": "pink",
-        "moz-card": "blue",
-        "moz-five-star": "yelow",
-        "moz-label": "orange",
-        "moz-message-bar": "green",
-        "moz-page-nav": "lightgreen",
-        "moz-support-link": "lightblue",
-        "moz-toggle": "grey",
-        "named-deck": "magenta",
-        "panel-list": "salmon",
-      },
+      colors,
+      greyTones,
       labels: {
         "moz-button": "moz-button",
         "moz-button-group": "moz-button-group",
@@ -332,12 +358,6 @@ const Page = {
     return sizeMode == "large"
       ? State.theme.datalabels.labels.font.size.large
       : State.theme.datalabels.labels.font.size.small;
-  },
-  shouldDisplayLegend(
-    aspectMode = State.aspectMode,
-    sizeMode = State.sizeMode
-  ) {
-    return sizeMode == "small";
   },
 };
 

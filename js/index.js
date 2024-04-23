@@ -88,5 +88,16 @@ function create_chart(selector, { all_labels, month_labels, data }) {
   });
 
   let ctx = document.querySelector(selector).getContext("2d");
-  return get_chart(ctx, data, all_labels, month_labels);
+  let chart = get_chart(ctx, data, all_labels, month_labels);
+  document.addEventListener("click", (e) => {
+    if (e.target.localName !== "canvas" && chart.filtered) {
+      chart.data.datasets.forEach((dataset) => {
+        let index = Page.getCategories().indexOf(dataset.label);
+        dataset.backgroundColor = State.theme.categories.colors[index];
+      });
+      chart.filtered = false;
+      chart.update();
+    }
+  })
+  return chart;
 }
