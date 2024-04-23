@@ -126,12 +126,35 @@ function get_chart(ctx, data, all_labels, month_labels) {
         },
       },
       legend: {
-        display: Page.shouldDisplayLegend(),
-        position: "bottom",
+        display: true,
+        reverse: true,
+        position: "left",
         labels: {
           filter: function (l) {
             return Page.getActiveMilestone().categories.includes(l.text);
           },
+        },
+        onClick: function (event, legendItem, legend) {
+          if (this.chart.filtered && this.chart.filteredBy == legendItem.text) {
+            this.chart.filtered = false;
+            this.chart.filteredBy = "";
+          } else {
+            this.chart.filtered = true;
+            this.chart.filteredBy = legendItem.text;
+          }
+
+          this.chart.data.datasets.forEach((dataset) => {
+            if (
+              this.chart.filtered &&
+              dataset.label !== this.chart.filteredBy
+            ) {
+              dataset.backgroundColor = dataset.greyBackgroundColor;
+            } else {
+              let index = Page.getCategories().indexOf(dataset.label);
+              dataset.backgroundColor = State.theme.categories.colors[index];
+            }
+          });
+          this.chart.update();
         },
       },
     },

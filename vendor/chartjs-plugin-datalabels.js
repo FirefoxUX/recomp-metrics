@@ -538,7 +538,8 @@ function drawTextLine(ctx, text, cfg) {
 			  ctx.fillText(`\u2B24 ${value}`, x, y, w);
 			}
 			let category = isNaN(label) ? getCategoryForLabel(label) : Page.getCategories()[label];
-			let color = State.theme.categories.colors[category];
+			let index = Page.getCategories().indexOf(category);
+			let color = State.theme.categories.colors[index];
 			ctx.fillStyle = color;
 			ctx.fillText("\u2B24", x, y, w);
 			ctx.fillStyle = State.theme.main.font.color;
