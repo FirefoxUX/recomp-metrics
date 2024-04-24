@@ -25,7 +25,7 @@ async function main() {
     atkinsonBold.load();
     await Promise.all([
       atkinsonRegular.loaded,
-      atkinsonBold,
+      atkinsonBold.loaded,
     ]);
   }
 
