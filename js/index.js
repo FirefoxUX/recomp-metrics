@@ -3,40 +3,29 @@ window.addEventListener("load", main);
 async function main() {
   {
     // Manually trigger external font loading to prevent canvas from drawing before the fonts are ready.
-    let firaSansRegular = new FontFace(
-      "Fira Sans",
-      "url(./vendor/fira/woff/FiraSans-Regular.woff)",
+    let atkinsonRegular = new FontFace(
+      "Atkinson Hyperlegible",
+      "url(./vendor/atkinson_hyperlegible/woff/Atkinson-Hyperlegible-Regular-102.woff)",
       {
         style: "normal",
         weight: "400",
       }
     );
-    let firaSansLight = new FontFace(
-      "Fira Sans",
-      "url(./vendor/fira/woff/FiraSans-Light.woff)",
-      {
-        style: "normal",
-        weight: "300",
-      }
-    );
-    let firaSansMedium = new FontFace(
-      "Fira Sans",
-      "url(./vendor/fira/woff/FiraSans-Medium.woff)",
+    let atkinsonBold = new FontFace(
+      "Atkinson Hyperlegible",
+      "url(./vendor/atkinson_hyperlegible/woff/Atkinson-Hyperlegible-Bold-102.woff)",
       {
         style: "normal",
         weight: "500",
       }
     );
-    document.fonts.add(firaSansRegular);
-    document.fonts.add(firaSansLight);
-    document.fonts.add(firaSansMedium);
-    firaSansRegular.load();
-    firaSansLight.load();
-    firaSansMedium.load();
+    document.fonts.add(atkinsonRegular);
+    document.fonts.add(atkinsonBold);
+    atkinsonRegular.load();
+    atkinsonBold.load();
     await Promise.all([
-      firaSansRegular.loaded,
-      firaSansLight.loaded,
-      firaSansMedium,
+      atkinsonRegular.loaded,
+      atkinsonBold.loaded,
     ]);
   }
 
