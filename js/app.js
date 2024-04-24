@@ -73,7 +73,7 @@ const State = {
   theme: {
     main: {
       font: {
-        family: "Fira Sans",
+        family: "Atkinson Hyperlegible",
         color: "#343434",
         weight: 400,
       },
