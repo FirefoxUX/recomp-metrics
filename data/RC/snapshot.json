@@ -1,6 +1,6 @@
 {
-"date": "2024-04-28",
-"revision": "2e7374599f",
+"date": "2024-04-29",
+"revision": "0916ef0172",
 "data": {
 "moz-button": {
 "browser/components/firefoxview/fxview-tab-list.mjs": 2,
@@ -16,23 +16,22 @@
 "browser/base/content/appmenu-viewcache.inc.xhtml": 1,
 "browser/components/reportbrokensite/content/reportBrokenSitePanel.inc.xhtml": 2,
 "browser/components/translations/content/fullPageTranslationsPanel.inc.xhtml": 2,
-"browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 1,
-"toolkit/mozapps/extensions/content/abuse-report-frame.html": 2,
-"browser/extensions/formautofill/content/editAddress.xhtml": 1,
-"browser/components/migration/content/migration-wizard.mjs": 7,
 "browser/components/screenshots/screenshots-buttons.js": 1,
-"toolkit/components/satchel/megalist/content/RemoveLogins.mjs": 1,
-"browser/components/downloads/content/downloadsPanel.inc.xhtml": 1,
+"browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 1,
+"browser/extensions/formautofill/content/editAddress.xhtml": 1,
 "browser/components/aboutlogins/content/aboutLogins.html": 5,
+"browser/components/downloads/content/downloadsPanel.inc.xhtml": 1,
+"toolkit/components/satchel/megalist/content/RemoveLogins.mjs": 1,
 "browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/shopping/content/shopping-message-bar.mjs": 1,
+"browser/components/migration/content/migration-wizard.mjs": 7,
 "toolkit/content/widgets/popupnotification.js": 1,
 "toolkit/components/printing/content/print.html": 1
 },
 "moz-card": {
-"browser/components/preferences/translations.inc.xhtml": 4,
 "browser/components/sidebar/sidebar-syncedtabs.mjs": 3,
-"browser/components/sidebar/sidebar-history.mjs": 2
+"browser/components/sidebar/sidebar-history.mjs": 2,
+"browser/components/preferences/translations.inc.xhtml": 4
 },
 "moz-five-star": {
 "toolkit/mozapps/extensions/content/aboutaddons.html": 2,
@@ -48,7 +47,6 @@
 "browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 3,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 2,
 "toolkit/mozapps/extensions/content/shortcuts.js": 1,
-"toolkit/mozapps/extensions/content/abuse-reports.js": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 3,
 "browser/components/preferences/main.inc.xhtml": 2,
 "browser/components/shopping/content/shopping-message-bar.mjs": 8,
@@ -59,35 +57,34 @@
 },
 "moz-support-link": {
 "browser/base/content/popup-notifications.inc": 2,
-"browser/components/translations/content/fullPageTranslationsPanel.inc.xhtml": 2,
 "browser/base/content/browser-addons.js": 1,
 "browser/base/content/appmenu-viewcache.inc.xhtml": 1,
-"toolkit/mozapps/extensions/content/aboutaddons.js": 2,
-"toolkit/mozapps/extensions/content/abuse-report-frame.html": 3,
-"toolkit/mozapps/extensions/content/aboutaddons.html": 11,
+"browser/components/translations/content/fullPageTranslationsPanel.inc.xhtml": 2,
+"browser/components/controlcenter/content/permissionPanel.inc.xhtml": 1,
+"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 4,
+"browser/components/controlcenter/content/identityPanel.inc.xhtml": 5,
 "browser/components/preferences/preferences.xhtml": 1,
+"toolkit/mozapps/extensions/content/aboutaddons.js": 2,
+"toolkit/mozapps/extensions/content/aboutaddons.html": 11,
 "browser/components/preferences/privacy.inc.xhtml": 25,
 "browser/components/preferences/main.inc.xhtml": 8,
 "browser/components/preferences/translations.inc.xhtml": 1,
 "browser/components/preferences/searchResults.inc.xhtml": 1,
 "browser/components/preferences/search.inc.xhtml": 5,
 "browser/components/extensions/ExtensionControlledPopup.sys.mjs": 1,
-"browser/components/controlcenter/content/permissionPanel.inc.xhtml": 1,
-"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 4,
-"browser/components/controlcenter/content/identityPanel.inc.xhtml": 5,
-"toolkit/components/formautofill/FormAutofillPreferences.sys.mjs": 3,
 "browser/components/migration/content/aboutWelcomeBack.xhtml": 1,
 "toolkit/content/widgets/notificationbox.js": 1,
+"toolkit/components/formautofill/FormAutofillPreferences.sys.mjs": 3,
 "toolkit/content/widgets/moz-page-nav/moz-page-nav.mjs": 1,
 "toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
 "moz-toggle": {
-"toolkit/mozapps/extensions/content/aboutaddons.js": 1,
-"toolkit/mozapps/extensions/content/aboutaddons.html": 1,
-"browser/components/preferences/privacy.inc.xhtml": 1,
 "browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/shopping/content/settings.mjs": 2,
+"browser/components/preferences/privacy.inc.xhtml": 1,
 "browser/components/preferences/search.inc.xhtml": 1,
+"toolkit/mozapps/extensions/content/aboutaddons.js": 1,
+"toolkit/mozapps/extensions/content/aboutaddons.html": 1,
 "browser/components/newtab/content-src/components/CustomizeMenu/ContentSection/ContentSection.jsx": 3,
 "toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
@@ -102,8 +99,8 @@
 "browser/components/firefoxview/opentabs.mjs": 3,
 "browser/components/firefoxview/history.mjs": 1,
 "browser/components/firefoxview/syncedtabs.mjs": 1,
-"toolkit/mozapps/extensions/content/aboutaddons.html": 3,
-"browser/components/migration/content/migration-wizard.mjs": 1
+"browser/components/migration/content/migration-wizard.mjs": 1,
+"toolkit/mozapps/extensions/content/aboutaddons.html": 3
 }
 }
 }
