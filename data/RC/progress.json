@@ -1025,5 +1025,22 @@
 },
 "date": "2024-04-29",
 "revision": "0916ef0172"
+},
+{
+"data": {
+"moz-button": 10,
+"moz-button-group": 27,
+"moz-card": 9,
+"moz-five-star": 4,
+"moz-label": 2,
+"moz-message-bar": 21,
+"moz-page-nav": 1,
+"moz-support-link": 78,
+"moz-toggle": 11,
+"named-deck": 5,
+"panel-list": 9
+},
+"date": "2024-05-01",
+"revision": "634e3a3b74"
 }
 ]
