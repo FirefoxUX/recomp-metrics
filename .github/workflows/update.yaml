@@ -35,7 +35,7 @@ jobs:
 
       - name: Generate new data
         run: >
-          python src/arewefluentyet/aggregate.py
+          python src/recomp-metrics/aggregate.py
           --mc ./gecko-dev --git --gh-pages-data gh-pages/data
           -m RC --use-current-revision
       - name: Update gh-pages branch
