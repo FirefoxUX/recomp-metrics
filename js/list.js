@@ -58,41 +58,12 @@ async function loadFile() {
   return prepareData(snapshot.data);
 }
 
-function formatStack(stack) {
-  if (!stack) {
-    return "";
-  }
-  if (typeof stack === "string") {
-    return stack;
-  }
-  let title = "";
-  for (let line of stack) {
-    title += `[${line.index}] ${line.call} ${line.path}:${line.line}\n`;
-  }
-  let span = document.createElement("span");
-  let path = stack[0].path.length > 70 ? "" : stack[0].path;
-  span.textContent = `${stack[0].call} ${path}:${stack[0].line}`;
-  span.setAttribute("title", title);
-  return span.outerHTML;
-}
-
-function normalizePath(path) {
-  let idx = path.indexOf("en-US/");
-  if (idx === -1) {
-    return path;
-  }
-  return path.substring(idx + 6);
-}
-
-
 function getIdPath(file) {
   if (file) {
     return getLinkForFile(file);
   }
   return "";
 }
-
-const twoPartModules = ["devtools", "security"];
 
 function getLinkForFile(file) {
   let sfPath = `https://searchfox.org/mozilla-central/source/${file}`;

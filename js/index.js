@@ -39,14 +39,6 @@ async function main() {
   );
   State.charts.push(chart);
 
-  //Page.updateMilestones();
-  //Page.setListLinkTarget();
-
-  if (State.dashboard) {
-    //updateAspectMode();
-    //await new Promise((resolve) => setTimeout(resolve, 1000));
-  }
-
   document.body.style.display = "block";
   window.addEventListener("resize", updateAspectMode);
 }
