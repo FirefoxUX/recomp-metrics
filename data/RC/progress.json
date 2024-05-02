@@ -1028,7 +1028,7 @@
 },
 {
 "data": {
-"moz-button": 10,
+"moz-button": 14,
 "moz-button-group": 27,
 "moz-card": 9,
 "moz-five-star": 4,
@@ -1041,6 +1041,6 @@
 "panel-list": 9
 },
 "date": "2024-05-01",
-"revision": "634e3a3b74"
+"revision": "73271a6e76"
 }
 ]
