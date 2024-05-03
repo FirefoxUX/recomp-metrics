@@ -142,7 +142,7 @@ def set_milestones(parser: argparse.ArgumentParser, args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='Aggregate data for arewefluentyet.com')
+        description='Aggregate data for recomp metrics')
     parser.add_argument('-m', '--milestone',
                         required=True,
                         action='append',
@@ -163,8 +163,8 @@ if __name__ == "__main__":
                         help='Work with a git rather than hg mozilla-central clone')
     parser.add_argument('--gh-pages-data',
                         required=True,
-                        metavar='../awfy/gh-pages/data',
-                        help='Path to a data directory of a arewefluentyet.com/gh-pages clone')
+                        metavar='../recomp-metrics/gh-pages/data',
+                        help='Path to a data directory of a recomp metrics/gh-pages clone')
 
     args = parser.parse_args()
 
