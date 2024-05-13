@@ -1,6 +1,6 @@
 {
-"date": "2024-05-11",
-"revision": "66ce9f5cbc",
+"date": "2024-05-12",
+"revision": "ee2ad260c2",
 "data": {
 "moz-button": {
 "browser/components/firefoxview/fxview-tab-list.mjs": 2,
@@ -23,10 +23,10 @@
 "browser/components/screenshots/screenshots-buttons.js": 1,
 "browser/extensions/formautofill/content/editAddress.xhtml": 1,
 "browser/components/aboutlogins/content/aboutLogins.html": 5,
-"browser/components/downloads/content/downloadsPanel.inc.xhtml": 1,
 "toolkit/components/satchel/megalist/content/megalist.html": 4,
 "browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/shopping/content/shopping-message-bar.mjs": 1,
+"browser/components/downloads/content/downloadsPanel.inc.xhtml": 1,
 "browser/components/migration/content/migration-wizard.mjs": 7,
 "toolkit/content/widgets/popupnotification.js": 1,
 "toolkit/components/printing/content/print.html": 1
@@ -37,9 +37,9 @@
 "browser/components/sidebar/sidebar-history.mjs": 2
 },
 "moz-five-star": {
-"toolkit/mozapps/extensions/content/aboutaddons.html": 2,
 "browser/components/shopping/content/recommended-ad.mjs": 1,
-"browser/components/shopping/content/adjusted-rating.mjs": 1
+"browser/components/shopping/content/adjusted-rating.mjs": 1,
+"toolkit/mozapps/extensions/content/aboutaddons.html": 2
 },
 "moz-label": {
 "browser/components/preferences/privacy.inc.xhtml": 1,
@@ -63,9 +63,9 @@
 "browser/base/content/browser-addons.js": 1,
 "browser/base/content/appmenu-viewcache.inc.xhtml": 1,
 "browser/components/translations/content/fullPageTranslationsPanel.inc.xhtml": 2,
+"browser/components/preferences/preferences.xhtml": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 2,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 11,
-"browser/components/preferences/preferences.xhtml": 1,
 "browser/components/preferences/privacy.inc.xhtml": 25,
 "browser/components/preferences/main.inc.xhtml": 8,
 "browser/components/preferences/translations.inc.xhtml": 1,
@@ -76,19 +76,19 @@
 "browser/components/controlcenter/content/permissionPanel.inc.xhtml": 1,
 "browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 4,
 "browser/components/controlcenter/content/identityPanel.inc.xhtml": 5,
-"toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1,
-"toolkit/components/formautofill/FormAutofillPreferences.sys.mjs": 3,
 "toolkit/content/widgets/notificationbox.js": 1,
-"toolkit/content/widgets/moz-page-nav/moz-page-nav.mjs": 1
+"toolkit/content/widgets/moz-page-nav/moz-page-nav.mjs": 1,
+"toolkit/components/formautofill/FormAutofillPreferences.sys.mjs": 3,
+"toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
 "moz-toggle": {
 "toolkit/mozapps/extensions/content/aboutaddons.js": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 1,
 "browser/components/preferences/privacy.inc.xhtml": 1,
 "browser/components/preferences/search.inc.xhtml": 1,
+"browser/components/newtab/content-src/components/CustomizeMenu/ContentSection/ContentSection.jsx": 4,
 "browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/shopping/content/settings.mjs": 2,
-"browser/components/newtab/content-src/components/CustomizeMenu/ContentSection/ContentSection.jsx": 4,
 "toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
 "named-deck": {
