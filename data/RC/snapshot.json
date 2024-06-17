@@ -1,21 +1,21 @@
 {
-"date": "2024-06-15",
-"revision": "5695e19e55",
+"date": "2024-06-16",
+"revision": "30e593b57f",
 "data": {
 "moz-button": {
+"toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
 "browser/components/backup/content/turn-off-scheduled-backups.mjs": 2,
 "browser/components/backup/content/backup-settings.mjs": 2,
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 3,
 "browser/components/backup/content/restore-from-backup.mjs": 3,
-"toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
 "browser/components/sidebar/sidebar-main.mjs": 1,
 "browser/components/sidebar/sidebar-customize.mjs": 1,
 "browser/components/firefoxview/opentabs-tab-list.mjs": 2,
 "browser/components/firefoxview/fxview-tab-list.mjs": 2,
 "browser/components/firefoxview/history.mjs": 1,
-"browser/components/screenshots/screenshots-preview.mjs": 4,
 "browser/components/preferences/translations.inc.xhtml": 1,
 "browser/components/preferences/translations.js": 2,
+"browser/components/screenshots/screenshots-preview.mjs": 4,
 "toolkit/components/satchel/megalist/content/megalist.html": 1
 },
 "moz-button-group": {
@@ -39,9 +39,9 @@
 "toolkit/components/satchel/megalist/content/megalist.html": 4
 },
 "moz-card": {
+"browser/components/preferences/translations.inc.xhtml": 4,
 "browser/components/sidebar/sidebar-history.mjs": 2,
-"browser/components/sidebar/sidebar-syncedtabs.mjs": 3,
-"browser/components/preferences/translations.inc.xhtml": 4
+"browser/components/sidebar/sidebar-syncedtabs.mjs": 3
 },
 "moz-five-star": {
 "toolkit/mozapps/extensions/content/aboutaddons.html": 2,
@@ -49,20 +49,20 @@
 "browser/components/shopping/content/adjusted-rating.mjs": 1
 },
 "moz-label": {
+"toolkit/content/widgets/moz-checkbox/moz-checkbox.mjs": 1,
 "toolkit/content/widgets/moz-toggle/moz-toggle.mjs": 1,
 "toolkit/content/widgets/moz-radio-group/moz-radio-group.mjs": 1,
-"toolkit/content/widgets/moz-checkbox/moz-checkbox.mjs": 1,
 "browser/components/preferences/privacy.inc.xhtml": 1
 },
 "moz-message-bar": {
-"browser/base/content/browser-addons.js": 1,
 "toolkit/content/widgets/notificationbox.js": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 3,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 2,
 "toolkit/mozapps/extensions/content/shortcuts.js": 1,
+"browser/base/content/browser-addons.js": 1,
 "browser/components/preferences/main.inc.xhtml": 2,
-"browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 3,
-"browser/components/shopping/content/shopping-message-bar.mjs": 8
+"browser/components/shopping/content/shopping-message-bar.mjs": 8,
+"browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 3
 },
 "moz-page-nav": {
 "browser/components/firefoxview/firefoxview.html": 1
@@ -82,9 +82,9 @@
 "browser/components/backup/content/turn-off-scheduled-backups.mjs": 1,
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 1,
 "browser/components/backup/content/restore-from-backup.mjs": 1,
+"browser/components/extensions/ExtensionControlledPopup.sys.mjs": 1,
 "browser/components/preferences/search.inc.xhtml": 5,
 "browser/components/preferences/preferences.xhtml": 1,
-"browser/components/extensions/ExtensionControlledPopup.sys.mjs": 1,
 "browser/components/preferences/searchResults.inc.xhtml": 1,
 "browser/components/preferences/privacy.inc.xhtml": 26,
 "browser/components/preferences/translations.inc.xhtml": 1,
@@ -112,10 +112,10 @@
 },
 "panel-list": {
 "toolkit/mozapps/extensions/content/aboutaddons.html": 3,
+"browser/components/migration/content/migration-wizard.mjs": 1,
 "browser/components/firefoxview/syncedtabs.mjs": 1,
 "browser/components/firefoxview/opentabs.mjs": 3,
-"browser/components/firefoxview/history.mjs": 1,
-"browser/components/migration/content/migration-wizard.mjs": 1
+"browser/components/firefoxview/history.mjs": 1
 }
 }
 }
