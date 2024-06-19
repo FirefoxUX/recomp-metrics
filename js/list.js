@@ -12,10 +12,14 @@ const State = {
         "moz-button",
         "moz-button-group",
         "moz-card",
+        "moz-checkbox",
+        "moz-fieldset",
         "moz-five-star",
         "moz-label",
         "moz-message-bar",
         "moz-page-nav",
+        "moz-radio",
+        "moz-radio-group",
         "moz-support-link",
         "moz-toggle",
         "named-deck",
@@ -140,8 +144,8 @@ $(document).ready(async function () {
       columns,
       order,
       destroy: true,
-      searching: false, 
-      paging: false
+      searching: false,
+      paging: false,
     });
   });
 });
