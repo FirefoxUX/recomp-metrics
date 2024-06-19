@@ -25,20 +25,20 @@ function generateGreyTone(color) {
 
 let colors = [
   "#F9CDAC",
-  "#F5BEA5",
+  "#F6BEA7",
   "#F3ACA2",
-  "#EF9399",
+  "#F0939B",
   "#EE8B97",
-  "#E8798E",
+  "#EB7A92",
   "#E96A8D",
-  "#D75888",
+  "#DF5F8C",
   "#DB5087",
-  "#BE468B",
+  "#C4468D",
   "#B8428C",
-  "#A1388F",
+  "#A1368F",
   "#973490",
-  "#7F2D92",
-  "#2D0F41",
+  "#812A92",
+  "#742796",
 ];
 
 let greyTones = colors.map(generateGreyTone);
