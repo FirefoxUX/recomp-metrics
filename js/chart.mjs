@@ -1,4 +1,7 @@
-function get_chart(ctx, data, all_labels, month_labels) {
+import { Page, State } from "./app.mjs";
+import { getBarPosition } from "./helpers.mjs";
+
+export function get_chart(ctx, data, all_labels, month_labels) {
   return new Chart(ctx, {
     data: data,
     options: {

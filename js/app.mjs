@@ -1,3 +1,21 @@
+export const COMPONENTS = [
+  "moz-button-group",
+  "moz-button",
+  "moz-card",
+  "moz-checkbox",
+  "moz-fieldset",
+  "moz-five-star",
+  "moz-label",
+  "moz-message-bar",
+  "moz-page-nav",
+  "moz-radio-group",
+  "moz-radio",
+  "moz-support-link",
+  "moz-toggle",
+  "named-deck",
+  "panel-list",
+];
+
 const isDashboard = new URL(document.location).searchParams.has("dashboard");
 const activeMilestone = new URL(document.location).searchParams.get(
   "milestone"
@@ -17,55 +35,75 @@ function generateGreyTone(color) {
   var avg = Math.round((r + g + b) / 3);
 
   // Convert average to hex
-  var greyHex = avg.toString(16).padStart(2, "0");
+  var greyHex = toHexString(avg);
 
   // Return grey hex value
   return "#" + greyHex + greyHex + greyHex;
 }
 
-let colors = [
-  "#F9CDAC",
-  "#F6BEA7",
-  "#F3ACA2",
-  "#F0939B",
-  "#EE8B97",
-  "#EB7A92",
-  "#E96A8D",
-  "#DF5F8C",
-  "#DB5087",
-  "#C4468D",
-  "#B8428C",
-  "#A1368F",
-  "#973490",
-  "#812A92",
-  "#742796",
-];
+function toHexString(num) {
+  return num.toString(16).padStart(2, "0");
+}
 
+// Function to interpolate a hex color between two colors.
+function interpolateColor(startColor, endColor, factor = 0.5) {
+  let result = startColor
+    .slice(1)
+    .match(/.{2}/g)
+    .map((c, i) =>
+      Math.round(
+        parseInt(c, 16) +
+          factor *
+            (parseInt(endColor.slice(1).match(/.{2}/g)[i], 16) -
+              parseInt(c, 16))
+      )
+    )
+    .map((c) => toHexString(c))
+    .join("");
+  return `#${result}`;
+}
+
+// Function to generate a sacle colors for each component.
+function generateColors({
+  startColor,
+  midColor,
+  endColor,
+  items = COMPONENTS,
+}) {
+  let colorCount = items.length;
+  let midPoint = Math.ceil(colorCount / 2);
+  let colors = [];
+
+  // Generate colors from startColor to midColor.
+  for (let i = 0; i < midPoint; i++) {
+    const factor = i / (midPoint - 1);
+    colors.push(interpolateColor(startColor, midColor, factor));
+  }
+
+  // Generate colors from midColor to endColor.
+  for (let i = 1; i < colorCount - midPoint + 1; i++) {
+    const factor = i / (colorCount - midPoint);
+    colors.push(interpolateColor(midColor, endColor, factor));
+  }
+
+  return colors;
+}
+
+let startColor = "#F9CDAC";
+let midColor = "#E96A8D";
+let endColor = "#742796";
+
+// Generate colors for the list of components.
+let colors = generateColors({ startColor, midColor, endColor });
 let greyTones = colors.map(generateGreyTone);
 
-const State = {
+export const State = {
   milestones: [
     {
       code: "RC",
       name: "mozilla-central",
       title: "Reusable Components usage",
-      categories: [
-        "moz-button",
-        "moz-button-group",
-        "moz-card",
-        "moz-checkbox",
-        "moz-fieldset",
-        "moz-five-star",
-        "moz-label",
-        "moz-message-bar",
-        "moz-page-nav",
-        "moz-radio",
-        "moz-radio-group",
-        "moz-support-link",
-        "moz-toggle",
-        "named-deck",
-        "panel-list",
-      ],
+      categories: COMPONENTS,
       skipInDashboard: [],
       categoriesBar: [0, 10],
       monthIntervals: 6,
@@ -89,23 +127,10 @@ const State = {
     categories: {
       colors,
       greyTones,
-      labels: {
-        "moz-button": "moz-button",
-        "moz-button-group": "moz-button-group",
-        "moz-card": "moz-card",
-        "moz-checkbox": "moz-checkbox",
-        "moz-fieldset": "moz-fieldset",
-        "moz-five-star": "moz-five-star",
-        "moz-label": "moz-label",
-        "moz-message-bar": "moz-message-bar",
-        "moz-page-nav": "moz-page-nav",
-        "moz-radio": "moz-radio",
-        "moz-radio-group": "moz-radio-group",
-        "moz-support-link": "moz-support-link",
-        "moz-toggle": "moz-toggle",
-        "named-deck": "named-deck",
-        "panel-list": "panel-list",
-      },
+      labels: COMPONENTS.reduce(
+        (acc, componentName) => ({ ...acc, [componentName]: componentName }),
+        {}
+      ),
     },
     axes: {
       font: {
@@ -176,8 +201,9 @@ const State = {
   },
   charts: [],
 };
+window.State = State;
 
-const Page = {
+export const Page = {
   reloadIntoMilestone(ms) {
     State.activeMilestone = ms;
     let url = new URL(document.location);
@@ -259,8 +285,9 @@ const Page = {
       : State.theme.datalabels.labels.font.size.small;
   },
 };
+window.Page = Page;
 
-function layout() {
+export function layout() {
   let side = document.getElementById("side");
   let footer = document.getElementById("footer");
 
@@ -275,7 +302,7 @@ function layout() {
   }
 }
 
-function updateAspectMode() {
+export function updateAspectMode() {
   let vwRatio = window.innerWidth / window.innerHeight;
   let vmin = Math.min(window.innerWidth, window.innerHeight);
 
