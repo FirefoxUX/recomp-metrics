@@ -1,4 +1,6 @@
-function getDatasetByLabel(chart, label) {
+import { Page } from "./app.mjs";
+
+export function getDatasetByLabel(chart, label) {
   for (let i in chart.data.datasets) {
     let dataset = chart.data.datasets[i];
     if (dataset.label == label) {
@@ -8,7 +10,7 @@ function getDatasetByLabel(chart, label) {
   return null;
 }
 
-function getCategoryForLabel(label) {
+export function getCategoryForLabel(label) {
   for (let cat in State.theme.categories.labels) {
     if (State.theme.categories.labels[cat] === label) {
       return cat;
@@ -16,8 +18,9 @@ function getCategoryForLabel(label) {
   }
   return null;
 }
+window.getCategoryForLabel = getCategoryForLabel;
 
-function getBarPosition(chart, index) {
+export function getBarPosition(chart, index) {
   const idx0 = Page.getCategoriesBar()[0];
   const meta = chart.getDatasetMeta(idx0 ?? 0);
   if (index >= meta.data.length) index = meta.data.length - 1;
@@ -38,7 +41,7 @@ function getBarPosition(chart, index) {
   ];
 }
 
-function getBarCategories(start = 0, end = 0) {
+export function getBarCategories(start = 0, end = 0) {
   let result = [];
   for (let idx in Page.getCategories()) {
     if (

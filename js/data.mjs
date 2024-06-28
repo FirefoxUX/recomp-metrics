@@ -1,4 +1,7 @@
-async function prepare_data(url) {
+import { Page, State } from "./app.mjs";
+import { getBarCategories, getDatasetByLabel, getBarPosition } from "./helpers.mjs";
+
+export async function prepare_data(url) {
   let response = await fetch(url);
   let snapshots = response.status == 200 ? await response.json() : [];
 
