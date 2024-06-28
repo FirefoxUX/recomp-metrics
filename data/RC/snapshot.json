@@ -1,6 +1,6 @@
 {
-"date": "2024-06-26",
-"revision": "56dd89bcf4",
+"date": "2024-06-27",
+"revision": "6b17ef1f53",
 "data": {
 "moz-button": {
 "browser/components/sidebar/sidebar-main.mjs": 1,
@@ -9,7 +9,6 @@
 "browser/components/firefoxview/fxview-tab-list.mjs": 2,
 "browser/components/firefoxview/opentabs-tab-list.mjs": 2,
 "browser/components/firefoxview/history.mjs": 1,
-"toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
 "browser/components/preferences/translations.js": 2,
 "browser/components/preferences/translations.inc.xhtml": 1,
 "browser/components/backup/content/backup-settings.mjs": 2,
@@ -17,12 +16,13 @@
 "browser/components/backup/content/restore-from-backup.mjs": 3,
 "browser/components/backup/content/disable-backup-encryption.mjs": 2,
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 3,
+"toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
 "toolkit/components/satchel/megalist/content/megalist.html": 1
 },
 "moz-button-group": {
-"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/base/content/appmenu-viewcache.inc.xhtml": 1,
 "browser/base/content/main-popupset.inc.xhtml": 1,
+"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/aboutlogins/content/aboutLogins.html": 5,
 "browser/components/shopping/content/shopping-message-bar.mjs": 1,
 "browser/components/reportbrokensite/content/reportBrokenSitePanel.inc.xhtml": 2,
@@ -37,8 +37,8 @@
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 1,
 "toolkit/content/widgets/popupnotification.js": 1,
 "browser/extensions/formautofill/content/editAddress.xhtml": 1,
-"toolkit/components/printing/content/print.html": 1,
-"toolkit/components/satchel/megalist/content/megalist.html": 4
+"toolkit/components/satchel/megalist/content/megalist.html": 4,
+"toolkit/components/printing/content/print.html": 1
 },
 "moz-card": {
 "browser/components/sidebar/sidebar-history.mjs": 2,
@@ -51,9 +51,9 @@
 "toolkit/mozapps/extensions/content/aboutaddons.html": 2
 },
 "moz-label": {
-"browser/components/preferences/privacy.inc.xhtml": 1,
 "toolkit/content/widgets/moz-toggle/moz-toggle.mjs": 1,
-"toolkit/content/widgets/moz-checkbox/moz-checkbox.mjs": 1
+"toolkit/content/widgets/moz-checkbox/moz-checkbox.mjs": 1,
+"browser/components/preferences/privacy.inc.xhtml": 1
 },
 "moz-message-bar": {
 "browser/base/content/browser-addons.js": 1,
@@ -62,8 +62,8 @@
 "toolkit/mozapps/extensions/content/shortcuts.js": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 2,
 "browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 3,
-"toolkit/content/widgets/notificationbox.js": 1,
-"browser/components/preferences/main.inc.xhtml": 2
+"browser/components/preferences/main.inc.xhtml": 2,
+"toolkit/content/widgets/notificationbox.js": 1
 },
 "moz-page-nav": {
 "browser/components/firefoxview/firefoxview.html": 1
@@ -71,10 +71,10 @@
 "moz-support-link": {
 "browser/base/content/appmenu-viewcache.inc.xhtml": 1,
 "browser/base/content/popup-notifications.inc": 2,
+"browser/base/content/browser-addons.js": 1,
 "browser/components/controlcenter/content/identityPanel.inc.xhtml": 5,
 "browser/components/controlcenter/content/permissionPanel.inc.xhtml": 1,
 "browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 4,
-"browser/base/content/browser-addons.js": 1,
 "browser/components/extensions/ExtensionControlledPopup.sys.mjs": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 11,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 2,
@@ -97,14 +97,14 @@
 "toolkit/components/formautofill/FormAutofillPreferences.sys.mjs": 3
 },
 "moz-toggle": {
+"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 1,
-"toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1,
-"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/shopping/content/settings.mjs": 2,
 "browser/components/newtab/content-src/components/CustomizeMenu/ContentSection/ContentSection.jsx": 4,
 "browser/components/preferences/search.inc.xhtml": 1,
-"browser/components/preferences/privacy.inc.xhtml": 1
+"browser/components/preferences/privacy.inc.xhtml": 1,
+"toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
 "named-deck": {
 "browser/base/content/navigator-toolbox.inc.xhtml": 1,
