@@ -1,22 +1,23 @@
 {
-"date": "2024-06-28",
-"revision": "cac3778e44",
+"date": "2024-06-29",
+"revision": "b219c6d206",
 "data": {
 "moz-button": {
+"toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
 "browser/components/sidebar/sidebar-main.mjs": 1,
 "browser/components/sidebar/sidebar-panel-header.mjs": 1,
 "browser/components/screenshots/screenshots-preview.mjs": 4,
 "browser/components/firefoxview/fxview-tab-list.mjs": 2,
 "browser/components/firefoxview/opentabs-tab-list.mjs": 2,
 "browser/components/firefoxview/history.mjs": 1,
-"browser/components/backup/content/backup-settings.mjs": 2,
+"browser/components/backup/content/backup-settings.mjs": 3,
+"browser/components/backup/content/enable-backup-encryption.mjs": 2,
 "browser/components/backup/content/turn-off-scheduled-backups.mjs": 2,
 "browser/components/backup/content/restore-from-backup.mjs": 3,
 "browser/components/backup/content/disable-backup-encryption.mjs": 2,
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 3,
 "browser/components/preferences/translations.js": 2,
 "browser/components/preferences/translations.inc.xhtml": 1,
-"toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
 "toolkit/components/satchel/megalist/content/megalist.html": 1
 },
 "moz-button-group": {
@@ -31,14 +32,15 @@
 "browser/components/migration/content/migration-wizard.mjs": 7,
 "browser/components/screenshots/screenshots-buttons.js": 1,
 "browser/components/downloads/content/downloadsPanel.inc.xhtml": 1,
+"browser/components/backup/content/enable-backup-encryption.mjs": 1,
 "browser/components/backup/content/turn-off-scheduled-backups.mjs": 1,
 "browser/components/backup/content/restore-from-backup.mjs": 1,
 "browser/components/backup/content/disable-backup-encryption.mjs": 1,
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 1,
 "toolkit/content/widgets/popupnotification.js": 1,
+"toolkit/components/satchel/megalist/content/megalist.html": 4,
 "browser/extensions/formautofill/content/editAddress.xhtml": 1,
-"toolkit/components/printing/content/print.html": 1,
-"toolkit/components/satchel/megalist/content/megalist.html": 4
+"toolkit/components/printing/content/print.html": 1
 },
 "moz-card": {
 "browser/components/sidebar/sidebar-history.mjs": 2,
@@ -51,8 +53,8 @@
 "toolkit/mozapps/extensions/content/aboutaddons.html": 2
 },
 "moz-label": {
-"browser/components/preferences/privacy.inc.xhtml": 1,
 "toolkit/content/widgets/moz-toggle/moz-toggle.mjs": 1,
+"browser/components/preferences/privacy.inc.xhtml": 1,
 "toolkit/content/widgets/moz-checkbox/moz-checkbox.mjs": 1
 },
 "moz-message-bar": {
@@ -62,8 +64,8 @@
 "toolkit/mozapps/extensions/content/shortcuts.js": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 2,
 "browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 3,
-"toolkit/content/widgets/notificationbox.js": 1,
-"browser/components/preferences/main.inc.xhtml": 2
+"browser/components/preferences/main.inc.xhtml": 2,
+"toolkit/content/widgets/notificationbox.js": 1
 },
 "moz-page-nav": {
 "browser/components/firefoxview/firefoxview.html": 1
@@ -88,6 +90,7 @@
 "browser/components/preferences/privacy.inc.xhtml": 26,
 "toolkit/content/aboutSupport.js": 1,
 "browser/components/backup/content/backup-settings.mjs": 1,
+"browser/components/backup/content/enable-backup-encryption.mjs": 1,
 "browser/components/backup/content/turn-off-scheduled-backups.mjs": 1,
 "browser/components/backup/content/restore-from-backup.mjs": 1,
 "browser/components/backup/content/disable-backup-encryption.mjs": 1,
@@ -98,10 +101,10 @@
 "toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
 "moz-toggle": {
-"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.js": 1,
 "browser/components/shopping/content/settings.mjs": 2,
+"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/newtab/content-src/components/CustomizeMenu/ContentSection/ContentSection.jsx": 4,
 "browser/components/preferences/search.inc.xhtml": 1,
 "browser/components/preferences/privacy.inc.xhtml": 1,
