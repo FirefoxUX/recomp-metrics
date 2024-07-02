@@ -1,3 +1,5 @@
+import { COMPONENTS } from "./app.mjs";
+
 const activeMilestone = new URL(document.location).searchParams.get(
   "milestone"
 );
@@ -8,19 +10,7 @@ const State = {
       code: "RC",
       name: "mozilla-central",
       title: "Reusable Components usage",
-      categories: [
-        "moz-button",
-        "moz-button-group",
-        "moz-card",
-        "moz-five-star",
-        "moz-label",
-        "moz-message-bar",
-        "moz-page-nav",
-        "moz-support-link",
-        "moz-toggle",
-        "named-deck",
-        "panel-list",
-      ],
+      categories: COMPONENTS,
       columns: ["file", "count"],
       skipInDashboard: [],
       categoriesBar: [0, 10],
@@ -140,8 +130,8 @@ $(document).ready(async function () {
       columns,
       order,
       destroy: true,
-      searching: false, 
-      paging: false
+      searching: false,
+      paging: false,
     });
   });
 });
