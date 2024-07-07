@@ -1955,5 +1955,26 @@
 },
 "date": "2024-07-05",
 "revision": "8fbb81f010"
+},
+{
+"data": {
+"moz-button": 31,
+"moz-button-group": 35,
+"moz-card": 9,
+"moz-checkbox": 1,
+"moz-fieldset": 2,
+"moz-five-star": 4,
+"moz-label": 3,
+"moz-message-bar": 21,
+"moz-page-nav": 1,
+"moz-radio": 4,
+"moz-radio-group": 2,
+"moz-support-link": 86,
+"moz-toggle": 12,
+"named-deck": 5,
+"panel-list": 9
+},
+"date": "2024-07-06",
+"revision": "dea459eb01"
 }
 ]
