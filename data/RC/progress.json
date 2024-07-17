@@ -2126,7 +2126,7 @@
 },
 {
 "data": {
-"moz-button": 36,
+"moz-button": 37,
 "moz-button-group": 36,
 "moz-card": 10,
 "moz-checkbox": 2,
@@ -2143,6 +2143,6 @@
 "panel-list": 9
 },
 "date": "2024-07-16",
-"revision": "a95ca2357d"
+"revision": "04936eceef"
 }
 ]
