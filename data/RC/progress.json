@@ -2291,5 +2291,26 @@
 },
 "date": "2024-07-23",
 "revision": "b3c85ac11d"
+},
+{
+"data": {
+"moz-button": 43,
+"moz-button-group": 36,
+"moz-card": 11,
+"moz-checkbox": 2,
+"moz-fieldset": 3,
+"moz-five-star": 4,
+"moz-label": 4,
+"moz-message-bar": 21,
+"moz-page-nav": 1,
+"moz-radio": 6,
+"moz-radio-group": 3,
+"moz-support-link": 87,
+"moz-toggle": 12,
+"named-deck": 5,
+"panel-list": 10
+},
+"date": "2024-07-24",
+"revision": "d353cfa1fb"
 }
 ]
