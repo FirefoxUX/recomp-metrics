@@ -1,6 +1,6 @@
 {
-"date": "2024-08-16",
-"revision": "10fcb8561f",
+"date": "2024-08-17",
+"revision": "e9fb50ad98",
 "data": {
 "moz-button": {
 "toolkit/content/widgets/moz-message-bar/moz-message-bar.mjs": 1,
@@ -28,33 +28,33 @@
 },
 "moz-button-group": {
 "browser/components/reportbrokensite/content/reportBrokenSitePanel.inc.xhtml": 2,
+"browser/components/screenshots/screenshots-buttons.js": 1,
 "toolkit/content/widgets/popupnotification.js": 1,
 "browser/components/shopping/content/shopping-message-bar.mjs": 1,
-"browser/extensions/formautofill/content/editAddress.xhtml": 1,
+"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
 "browser/components/translations/content/selectTranslationsPanel.inc.xhtml": 1,
 "browser/components/translations/content/fullPageTranslationsPanel.inc.xhtml": 2,
-"browser/components/controlcenter/content/protectionsPanel.inc.xhtml": 1,
+"browser/extensions/formautofill/content/editAddress.xhtml": 1,
+"browser/components/migration/content/migration-wizard.mjs": 7,
 "browser/components/backup/content/disable-backup-encryption.mjs": 1,
 "browser/components/backup/content/turn-on-scheduled-backups.mjs": 1,
 "browser/components/backup/content/enable-backup-encryption.mjs": 1,
 "browser/components/backup/content/turn-off-scheduled-backups.mjs": 1,
 "browser/components/backup/content/restore-from-backup.mjs": 1,
-"browser/components/migration/content/migration-wizard.mjs": 7,
 "browser/components/aboutlogins/content/aboutLogins.html": 5,
 "browser/components/newtab/content-src/components/DiscoveryStreamComponents/TopicSelection/TopicSelection.jsx": 1,
 "browser/base/content/main-popupset.inc.xhtml": 1,
-"browser/base/content/appmenu-viewcache.inc.xhtml": 1,
 "browser/components/downloads/content/downloadsPanel.inc.xhtml": 1,
+"browser/base/content/appmenu-viewcache.inc.xhtml": 1,
 "toolkit/components/printing/content/print.html": 1,
-"browser/components/screenshots/screenshots-buttons.js": 1,
 "toolkit/components/satchel/megalist/content/megalist.html": 4
 },
 "moz-card": {
-"toolkit/components/satchel/megalist/content/PasswordCard.mjs": 1,
 "browser/components/sidebar/sidebar-history.mjs": 2,
 "browser/components/sidebar/sidebar-syncedtabs.mjs": 3,
 "browser/components/preferences/experimental.js": 1,
-"browser/components/preferences/translations.inc.xhtml": 4
+"browser/components/preferences/translations.inc.xhtml": 4,
+"toolkit/components/satchel/megalist/content/PasswordCard.mjs": 1
 },
 "moz-checkbox": {
 "browser/components/sidebar/sidebar-customize.mjs": 1,
@@ -142,10 +142,10 @@
 "toolkit/components/pictureinpicture/content/pictureInPicturePanel.inc.xhtml": 1
 },
 "named-deck": {
-"browser/components/firefoxview/firefoxview.html": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 1,
-"browser/components/migration/content/migration-wizard.mjs": 1,
+"browser/components/firefoxview/firefoxview.html": 1,
 "browser/base/content/navigator-toolbox.inc.xhtml": 1,
+"browser/components/migration/content/migration-wizard.mjs": 1,
 "toolkit/components/reader/content/aboutReader.html": 1
 },
 "panel-list": {
@@ -153,8 +153,8 @@
 "browser/components/firefoxview/opentabs.mjs": 3,
 "browser/components/firefoxview/history.mjs": 1,
 "toolkit/mozapps/extensions/content/aboutaddons.html": 3,
-"browser/components/migration/content/migration-wizard.mjs": 1,
-"toolkit/components/satchel/megalist/content/MegalistAlpha.mjs": 1
+"toolkit/components/satchel/megalist/content/MegalistAlpha.mjs": 1,
+"browser/components/migration/content/migration-wizard.mjs": 1
 }
 }
 }
