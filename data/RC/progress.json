@@ -2837,5 +2837,26 @@
 },
 "date": "2024-08-25",
 "revision": "3929b2eab0"
+},
+{
+"data": {
+"moz-button": 46,
+"moz-button-group": 36,
+"moz-card": 12,
+"moz-checkbox": 3,
+"moz-fieldset": 3,
+"moz-five-star": 4,
+"moz-label": 4,
+"moz-message-bar": 25,
+"moz-page-nav": 1,
+"moz-radio": 6,
+"moz-radio-group": 3,
+"moz-support-link": 88,
+"moz-toggle": 12,
+"named-deck": 5,
+"panel-list": 10
+},
+"date": "2024-08-26",
+"revision": "490a1df802"
 }
 ]
