@@ -3383,5 +3383,26 @@
 },
 "date": "2024-09-27",
 "revision": "3a34b46169"
+},
+{
+"data": {
+"moz-button": 57,
+"moz-button-group": 38,
+"moz-card": 15,
+"moz-checkbox": 4,
+"moz-fieldset": 4,
+"moz-five-star": 4,
+"moz-label": 5,
+"moz-message-bar": 28,
+"moz-page-nav": 1,
+"moz-radio": 6,
+"moz-radio-group": 3,
+"moz-support-link": 88,
+"moz-toggle": 12,
+"named-deck": 5,
+"panel-list": 11
+},
+"date": "2024-09-28",
+"revision": "72b2f726cf"
 }
 ]
