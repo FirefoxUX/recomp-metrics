@@ -4016,7 +4016,7 @@
 },
 {
 "data": {
-"moz-button": 71,
+"moz-button": 70,
 "moz-button-group": 40,
 "moz-card": 17,
 "moz-checkbox": 4,
@@ -4033,6 +4033,6 @@
 "panel-list": 11
 },
 "date": "2024-11-06",
-"revision": "64e2c3be9d"
+"revision": "9fc1bfb2f3"
 }
 ]
