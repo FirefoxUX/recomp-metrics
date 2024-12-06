@@ -4538,5 +4538,26 @@
 },
 "date": "2024-12-04",
 "revision": "8c9c85c74e"
+},
+{
+"data": {
+"moz-button": 75,
+"moz-button-group": 41,
+"moz-card": 18,
+"moz-checkbox": 4,
+"moz-fieldset": 4,
+"moz-five-star": 4,
+"moz-label": 4,
+"moz-message-bar": 32,
+"moz-page-nav": 2,
+"moz-radio": 6,
+"moz-radio-group": 3,
+"moz-support-link": 90,
+"moz-toggle": 14,
+"named-deck": 5,
+"panel-list": 11
+},
+"date": "2024-12-05",
+"revision": "2f698d5815"
 }
 ]
