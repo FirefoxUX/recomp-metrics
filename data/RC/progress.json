@@ -4772,9 +4772,9 @@
 },
 {
 "data": {
-"moz-button": 77,
+"moz-button": 78,
 "moz-button-group": 41,
-"moz-card": 18,
+"moz-card": 19,
 "moz-checkbox": 4,
 "moz-fieldset": 4,
 "moz-five-star": 5,
@@ -4789,6 +4789,6 @@
 "panel-list": 11
 },
 "date": "2024-12-19",
-"revision": "826ab25314"
+"revision": "495dafe9d8"
 }
 ]
