@@ -5000,5 +5000,26 @@
 },
 "date": "2024-12-30",
 "revision": "b6718bf263"
+},
+{
+"data": {
+"moz-button": 78,
+"moz-button-group": 41,
+"moz-card": 19,
+"moz-checkbox": 4,
+"moz-fieldset": 4,
+"moz-five-star": 5,
+"moz-label": 3,
+"moz-message-bar": 35,
+"moz-page-nav": 2,
+"moz-radio": 6,
+"moz-radio-group": 3,
+"moz-support-link": 88,
+"moz-toggle": 16,
+"named-deck": 5,
+"panel-list": 11
+},
+"date": "2025-01-01",
+"revision": "c524840225"
 }
 ]
