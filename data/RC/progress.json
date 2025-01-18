@@ -5297,7 +5297,7 @@
 },
 {
 "data": {
-"moz-button": 78,
+"moz-button": 80,
 "moz-button-group": 40,
 "moz-card": 20,
 "moz-checkbox": 4,
@@ -5314,6 +5314,6 @@
 "panel-list": 10
 },
 "date": "2025-01-17",
-"revision": "3aa93e41cf"
+"revision": "5ef39aaccb"
 }
 ]
