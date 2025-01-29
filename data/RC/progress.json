@@ -5504,5 +5504,26 @@
 },
 "date": "2025-01-28",
 "revision": "a4da62e1b5"
+},
+{
+"data": {
+"moz-button": 81,
+"moz-button-group": 40,
+"moz-card": 20,
+"moz-checkbox": 4,
+"moz-fieldset": 4,
+"moz-five-star": 5,
+"moz-label": 2,
+"moz-message-bar": 36,
+"moz-page-nav": 2,
+"moz-radio": 9,
+"moz-radio-group": 4,
+"moz-support-link": 89,
+"moz-toggle": 16,
+"named-deck": 5,
+"panel-list": 10
+},
+"date": "2025-01-29",
+"revision": "338230dfeb"
 }
 ]
