@@ -183,6 +183,7 @@ export async function prepare_data(url) {
               });
               result += "\n";
               let values = [];
+              let totalCount = 0;
               for (let category of categories) {
                 if (!categoriesWithData.has(category)) {
                   continue;
@@ -190,9 +191,18 @@ export async function prepare_data(url) {
                 let label = State.theme.categories.labels[category];
                 let value =
                   getDatasetByLabel(ctx.chart, label).data[index] || 0;
+                if (!value) {
+                  continue;
+                }
                 values.push(`! \u2B24 ${label}|${value}`);
+                totalCount += value;
               }
-              result += values.reverse().join("\n");
+              result += [
+                ...values.reverse(),
+                `Components: ${values.length}`,
+                `Total: ${totalCount}`
+              ].join("\n");
+
               return result;
             },
           };
