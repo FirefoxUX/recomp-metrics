@@ -6389,7 +6389,7 @@
 },
 {
 "data": {
-"moz-button": 93,
+"moz-button": 94,
 "moz-button-group": 43,
 "moz-card": 20,
 "moz-checkbox": 8,
@@ -6406,6 +6406,6 @@
 "panel-list": 10
 },
 "date": "2025-03-21",
-"revision": "7cd465a0ed"
+"revision": "805c333508"
 }
 ]
