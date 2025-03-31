@@ -1,28 +1,10 @@
-export const COMPONENTS = [
-  "moz-button-group",
-  "moz-button",
-  "moz-card",
-  "moz-checkbox",
-  "moz-fieldset",
-  "moz-five-star",
-  "moz-label",
-  "moz-message-bar",
-  "moz-page-nav",
-  "moz-radio-group",
-  "moz-radio",
-  "moz-support-link",
-  "moz-toggle",
-  "named-deck",
-  "panel-list",
-];
-
 const isDashboard = new URL(document.location).searchParams.has("dashboard");
 const activeMilestone = new URL(document.location).searchParams.get(
   "milestone"
 );
 
 // Takes a color hex value and returns a grey tone.
-function generateGreyTone(color) {
+export function generateGreyTone(color) {
   // Remove '#' if present
   let hex = color.replace("#", "");
 
@@ -64,11 +46,11 @@ function interpolateColor(startColor, endColor, factor = 0.5) {
 }
 
 // Function to generate a sacle colors for each component.
-function generateColors({
-  startColor,
-  midColor,
-  endColor,
-  items = COMPONENTS,
+export function generateColors({
+  startColor = "#F9CDAC",
+  midColor = "#E96A8D",
+  endColor = "#742796",
+  items,
 }) {
   let colorCount = items.length;
   let midPoint = Math.ceil(colorCount / 2);
@@ -89,21 +71,13 @@ function generateColors({
   return colors;
 }
 
-let startColor = "#F9CDAC";
-let midColor = "#E96A8D";
-let endColor = "#742796";
-
-// Generate colors for the list of components.
-let colors = generateColors({ startColor, midColor, endColor });
-let greyTones = colors.map(generateGreyTone);
-
 export const State = {
   milestones: [
     {
       code: "RC",
       name: "mozilla-central",
       title: "Reusable Components usage",
-      categories: COMPONENTS,
+      categories: [],
       skipInDashboard: [],
       categoriesBar: [0, 10],
       monthIntervals: 6,
@@ -125,12 +99,9 @@ export const State = {
       background: "white",
     },
     categories: {
-      colors,
-      greyTones,
-      labels: COMPONENTS.reduce(
-        (acc, componentName) => ({ ...acc, [componentName]: componentName }),
-        {}
-      ),
+      colors: [],
+      greyTones: [],
+      labels: [],
     },
     axes: {
       font: {
