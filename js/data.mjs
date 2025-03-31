@@ -1,5 +1,9 @@
-import { Page, State } from "./app.mjs";
-import { getBarCategories, getDatasetByLabel, getBarPosition } from "./helpers.mjs";
+import { Page, State, generateColors, generateGreyTone } from "./app.mjs";
+import {
+  getBarCategories,
+  getDatasetByLabel,
+  getBarPosition,
+} from "./helpers.mjs";
 
 export async function prepare_data(url) {
   let response = await fetch(url);
@@ -12,6 +16,16 @@ export async function prepare_data(url) {
     (a, b) => lastSnapshot[b] - lastSnapshot[a]
   );
   State.milestones[0].categories = sortedComponents;
+
+  // Dynamically set chart labels and colors based on components.
+  State.theme.categories.labels = sortedComponents.reduce(
+    (acc, componentName) => ({ ...acc, [componentName]: componentName }),
+    {}
+  );
+  let colors = generateColors({ items: sortedComponents });
+  let greyTones = colors.map(generateGreyTone);
+  State.theme.categories.colors = colors;
+  State.theme.categories.greyTones = greyTones;
 
   let all_labels = [];
   let all_points = {
@@ -200,7 +214,7 @@ export async function prepare_data(url) {
               result += [
                 ...values.reverse(),
                 `Components: ${values.length}`,
-                `Total: ${totalCount}`
+                `Total: ${totalCount}`,
               ].join("\n");
 
               return result;
@@ -244,7 +258,7 @@ export async function prepare_data(url) {
       });
     }
     let barCategories = getBarCategories();
-    Page.getCategories().forEach(function(category, index) {
+    Page.getCategories().forEach(function (category, index) {
       let inBar = barCategories.includes(category);
       datasets.push({
         type: "line",
