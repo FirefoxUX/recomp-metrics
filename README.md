@@ -68,6 +68,12 @@ The aggregator for `RC` can be called like this:
 python3 src/recomp-metrics/aggregate.py -m RC --mc ../mozilla-unified --gh-pages-data gh-pages/data --use-current-revision
 ```
 
+If you're using git instead of mercurial you'll need to pass a `--git` flag to get the data generation working:
+
+```
+python3 src/recomp-metrics/aggregate.py -m RC --mc ../mozilla-unified --gh-pages-data gh-pages/data --use-current-revision --git
+```
+
 ## Committing the Data
 
 Once you've generated new data for `RC`, you may want to serve the static site locally to view the update yourself. For example, you can run `python3 -m http.server 8000` from the folder with the `gh-pages` clone.
@@ -78,3 +84,13 @@ Ultimately, you will need to add the changes as a commit on the `gh-pages` branc
 modified:   data/RC/progress.json
 modified:   data/RC/snapshot.json
 ```
+
+## Running Everything Locally
+
+We often make changes to the `main` and `gh-pages` branches simultaneously. To get all the pieces working together locally, follow these steps:
+
+1. From the `main` branch checkout whatever feature branch you are working on or reviewing
+2. Run the command to generate data
+3. `cd` into `gh-pages`
+4. Switch to the `gh-pages` branch you are working on or reviewing
+5. Run `python3 -m http.server 8000` to start a local server
