@@ -1,5 +1,3 @@
-import { COMPONENTS } from "./app.mjs";
-
 const activeMilestone = new URL(document.location).searchParams.get(
   "milestone"
 );
@@ -10,7 +8,7 @@ const State = {
       code: "RC",
       name: "mozilla-central",
       title: "Reusable Components usage",
-      categories: COMPONENTS,
+      categories: [],
       columns: ["file", "count"],
       skipInDashboard: [],
       categoriesBar: [0, 10],
@@ -117,21 +115,23 @@ $(document).ready(async function () {
   let tableTemplate = document.getElementById("table-template");
   let tableContainer = document.getElementById("table-container");
 
-  data.forEach(({ component, data }, i) => {
-    let table = tableTemplate.cloneNode(true);
-    table.id = `data-table-${i}`;
-    tableContainer.appendChild(table);
+  data
+    .sort((a, b) => a.component.localeCompare(b.component))
+    .forEach(({ component, data }, i) => {
+      let table = tableTemplate.cloneNode(true);
+      table.id = `data-table-${i}`;
+      tableContainer.appendChild(table);
 
-    let tableHeading = document.createElement("h2");
-    tableHeading.innerText = `${component}`;
-    table.before(tableHeading);
-    $(table).DataTable({
-      data,
-      columns,
-      order,
-      destroy: true,
-      searching: false,
-      paging: false,
+      let tableHeading = document.createElement("h2");
+      tableHeading.innerText = `${component}`;
+      table.before(tableHeading);
+      $(table).DataTable({
+        data,
+        columns,
+        order,
+        destroy: true,
+        searching: false,
+        paging: false,
+      });
     });
-  });
 });
