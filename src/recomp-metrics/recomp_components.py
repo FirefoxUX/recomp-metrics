@@ -10,28 +10,13 @@ from milestone import Milestone
 
 from pathlib import Path
 
+
 class RecompComponents(Milestone):
     name = "RC"
     start_date = date(2022, 8, 1)
 
     def get_data(self, source: Source, date, revision):
-        component_names=[
-            "moz-button",
-            "moz-button-group",
-            "moz-card",
-            "moz-checkbox",
-            "moz-fieldset",
-            "moz-five-star",
-            "moz-label",
-            "moz-message-bar",
-            "moz-page-nav",
-            "moz-radio",
-            "moz-radio-group",
-            "moz-support-link",
-            "moz-toggle",
-            "named-deck",
-            "panel-list",
-        ]
+        component_names = []
         entries = {}
         progress = {}
         # Ensure the mozilla-central arg has the trailing directory separator
@@ -39,8 +24,26 @@ class RecompComponents(Milestone):
         # and Unix
         if self.mozilla_source[-1] != "/":
             self.mozilla_source = self.mozilla_source + "/"
+
+        mozilla_central_dir = os.path.abspath(self.mozilla_source)
+        toolkit_widgets_dir = os.path.join(
+            mozilla_central_dir, "toolkit/content/widgets/"
+        )
+        widget_contents = os.listdir(toolkit_widgets_dir)
+
+        # Iterate over the contents of the toolkit/contents/widgets dir and look
+        # for folders that start with moz-, with special casing for moz-radio
+        # (sub-component of moz-radio-group) and named-deck (not in a folder)
+        for item in widget_contents:
+            if os.path.isdir(os.path.join(toolkit_widgets_dir, item)):
+                if item.startswith("moz-radio"):
+                    component_names.extend([item, item.removesuffix("-group")])
+                elif item.startswith("moz-") or item == "panel-list":
+                    component_names.append(item)
+            elif "named-deck" in item:
+                    component_names.append(os.path.splitext(item)[0])
+
         for component in component_names:
-            mozilla_central_dir = os.path.abspath(self.mozilla_source)
             query = f'document\\.createElement\\(\"{component}\"\\)|<{component}(?!-)|<html:{component}(?!-)|is=\"{component}\"|is: \"{component}\"'
             comment_query = '(?:\*|\/\/)([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*'
             print("Searching for:", query)
