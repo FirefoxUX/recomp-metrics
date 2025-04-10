@@ -1,4 +1,4 @@
-import { Page, State, generateColors, generateGreyTone } from "./app.mjs";
+import { Page, State } from "./app.mjs";
 import {
   getBarCategories,
   getDatasetByLabel,
@@ -18,14 +18,7 @@ export async function prepare_data(url) {
   State.milestones[0].categories = sortedComponents;
 
   // Dynamically set chart labels and colors based on components.
-  State.theme.categories.labels = sortedComponents.reduce(
-    (acc, componentName) => ({ ...acc, [componentName]: componentName }),
-    {}
-  );
-  let colors = generateColors({ items: sortedComponents });
-  let greyTones = colors.map(generateGreyTone);
-  State.theme.categories.colors = colors;
-  State.theme.categories.greyTones = greyTones;
+  State.updateTheme(sortedComponents);
 
   let all_labels = [];
   let all_points = {

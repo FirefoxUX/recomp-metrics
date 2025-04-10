@@ -4,7 +4,7 @@ const activeMilestone = new URL(document.location).searchParams.get(
 );
 
 // Takes a color hex value and returns a grey tone.
-export function generateGreyTone(color) {
+function generateGreyTone(color) {
   // Remove '#' if present
   let hex = color.replace("#", "");
 
@@ -46,7 +46,7 @@ function interpolateColor(startColor, endColor, factor = 0.5) {
 }
 
 // Function to generate a sacle colors for each component.
-export function generateColors({
+function generateColors({
   startColor = "#F9CDAC",
   midColor = "#E96A8D",
   endColor = "#742796",
@@ -171,6 +171,16 @@ export const State = {
     },
   },
   charts: [],
+  updateTheme(components) {
+    State.theme.categories.labels = components.reduce(
+      (acc, componentName) => ({ ...acc, [componentName]: componentName }),
+      {}
+    );
+    let colors = generateColors({ items: components });
+    let greyTones = colors.map(generateGreyTone);
+    State.theme.categories.colors = colors;
+    State.theme.categories.greyTones = greyTones;
+  },
 };
 window.State = State;
 
