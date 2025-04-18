@@ -6858,7 +6858,7 @@
 {
 "data": {
 "moz-box-button": 1,
-"moz-button": 97,
+"moz-button": 99,
 "moz-button-group": 44,
 "moz-card": 21,
 "moz-checkbox": 8,
@@ -6875,6 +6875,6 @@
 "panel-list": 10
 },
 "date": "2025-04-17",
-"revision": "0383ce6fe9"
+"revision": "41f77c57c5"
 }
 ]
