@@ -22,10 +22,10 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-      - name: Checkout mozilla/gecko-dev
+      - name: Checkout mozilla-firefox/firefox
         uses: actions/checkout@v3
         with:
-          repository: mozilla/gecko-dev
+          repository: mozilla-firefox/firefox
           path: gecko-dev
       - uses: actions/setup-python@v4
         with:
