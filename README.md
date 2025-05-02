@@ -40,7 +40,7 @@ but this is not required as the directory names and paths are arbitrary.
 Aggregating data for `RC` can be done by statically analyzing the repository.
 
 ```
-python3 src/recomp-metrics/aggregate.py -m RC --mc ../mozilla-unified --gh-pages-data gh-pages/data --use-current-revision --git
+python3 src/recomp-metrics/aggregate.py -m RC --mc ../mozilla-unified --gh-pages-data gh-pages/data --use-current-revision
 ```
 
 ## Committing the Data
