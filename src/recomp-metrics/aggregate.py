@@ -158,9 +158,6 @@ if __name__ == "__main__":
                         required=True,
                         metavar='../mozilla-unified',
                         help='Path to mozilla-central clone')
-    parser.add_argument('--git',
-                        action='store_true',
-                        help='Work with a git rather than hg mozilla-central clone')
     parser.add_argument('--gh-pages-data',
                         required=True,
                         metavar='../recomp-metrics/gh-pages/data',
@@ -171,10 +168,8 @@ if __name__ == "__main__":
     milestones = set_milestones(parser, args)
 
     verify_mc_path(parser, args.mc)
-    if args.git:
-        source = GitSource(args.mc)
-    else:
-        source = HgSource(args.mc)
+
+    source = GitSource(args.mc)
 
     PARAMS["dry_run"] = args.dry_run
 
