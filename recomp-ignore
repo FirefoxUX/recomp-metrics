@@ -1,3 +1,4 @@
+*.figma.ts
 *.stories.mjs
 *.stories.md
 *.css
