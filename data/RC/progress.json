@@ -8395,7 +8395,7 @@
 "moz-button": 116,
 "moz-button-group": 47,
 "moz-card": 22,
-"moz-checkbox": 9,
+"moz-checkbox": 13,
 "moz-fieldset": 7,
 "moz-five-star": 3,
 "moz-input-search": 16,
@@ -8411,6 +8411,6 @@
 "panel-list": 11
 },
 "date": "2025-07-04",
-"revision": "4438aefd9f"
+"revision": "ffe1e2da67"
 }
 ]
