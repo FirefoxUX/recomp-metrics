@@ -8512,5 +8512,30 @@
 },
 "date": "2025-07-10",
 "revision": "15d9e77581"
+},
+{
+"data": {
+"moz-box-button": 1,
+"moz-box-item": 1,
+"moz-button": 118,
+"moz-button-group": 47,
+"moz-card": 22,
+"moz-checkbox": 13,
+"moz-fieldset": 7,
+"moz-five-star": 3,
+"moz-input-search": 16,
+"moz-label": 3,
+"moz-message-bar": 30,
+"moz-page-nav": 2,
+"moz-radio": 10,
+"moz-radio-group": 3,
+"moz-support-link": 92,
+"moz-toggle": 15,
+"moz-visual-picker": 3,
+"named-deck": 5,
+"panel-list": 11
+},
+"date": "2025-07-11",
+"revision": "dc1e512e40"
 }
 ]
