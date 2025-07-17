@@ -8618,9 +8618,10 @@
 },
 {
 "data": {
+"moz-badge": 1,
 "moz-box-button": 1,
 "moz-box-item": 1,
-"moz-button": 118,
+"moz-button": 119,
 "moz-button-group": 47,
 "moz-card": 22,
 "moz-checkbox": 13,
@@ -8640,6 +8641,6 @@
 "panel-list": 11
 },
 "date": "2025-07-16",
-"revision": "a6e541cb18"
+"revision": "e831a170e6"
 }
 ]
