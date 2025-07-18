@@ -8642,5 +8642,32 @@
 },
 "date": "2025-07-16",
 "revision": "e831a170e6"
+},
+{
+"data": {
+"moz-badge": 1,
+"moz-box-button": 1,
+"moz-box-item": 1,
+"moz-button": 120,
+"moz-button-group": 47,
+"moz-card": 22,
+"moz-checkbox": 13,
+"moz-fieldset": 7,
+"moz-five-star": 3,
+"moz-input-search": 16,
+"moz-label": 3,
+"moz-message-bar": 30,
+"moz-page-nav": 2,
+"moz-radio": 10,
+"moz-radio-group": 3,
+"moz-reorderable-list": 1,
+"moz-support-link": 92,
+"moz-toggle": 16,
+"moz-visual-picker": 2,
+"named-deck": 5,
+"panel-list": 11
+},
+"date": "2025-07-17",
+"revision": "5430aeb10f"
 }
 ]
