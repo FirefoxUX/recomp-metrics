@@ -8920,5 +8920,33 @@
 },
 "date": "2025-07-27",
 "revision": "96666ecb79"
+},
+{
+"data": {
+"moz-badge": 1,
+"moz-box-button": 1,
+"moz-box-item": 1,
+"moz-button": 128,
+"moz-button-group": 49,
+"moz-card": 22,
+"moz-checkbox": 13,
+"moz-fieldset": 7,
+"moz-five-star": 3,
+"moz-input-search": 16,
+"moz-label": 3,
+"moz-message-bar": 30,
+"moz-page-nav": 2,
+"moz-radio": 10,
+"moz-radio-group": 3,
+"moz-reorderable-list": 2,
+"moz-select": 1,
+"moz-support-link": 92,
+"moz-toggle": 17,
+"moz-visual-picker": 2,
+"named-deck": 5,
+"panel-list": 13
+},
+"date": "2025-07-28",
+"revision": "830f9c413c"
 }
 ]
