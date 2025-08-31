@@ -9839,5 +9839,34 @@
 },
 "date": "2025-08-29",
 "revision": "9e34621d53"
+},
+{
+"data": {
+"moz-badge": 2,
+"moz-box-button": 1,
+"moz-box-group": 1,
+"moz-box-item": 3,
+"moz-button": 142,
+"moz-button-group": 50,
+"moz-card": 24,
+"moz-checkbox": 15,
+"moz-fieldset": 8,
+"moz-five-star": 3,
+"moz-input-search": 16,
+"moz-label": 3,
+"moz-message-bar": 33,
+"moz-page-nav": 2,
+"moz-radio": 10,
+"moz-radio-group": 3,
+"moz-reorderable-list": 2,
+"moz-select": 1,
+"moz-support-link": 89,
+"moz-toggle": 21,
+"moz-visual-picker": 2,
+"named-deck": 5,
+"panel-list": 14
+},
+"date": "2025-08-30",
+"revision": "07bae244bc"
 }
 ]
