@@ -9933,7 +9933,7 @@
 "moz-box-button": 1,
 "moz-box-group": 1,
 "moz-box-item": 3,
-"moz-button": 142,
+"moz-button": 143,
 "moz-button-group": 50,
 "moz-card": 24,
 "moz-checkbox": 15,
@@ -9954,6 +9954,6 @@
 "panel-list": 14
 },
 "date": "2025-09-03",
-"revision": "8f85432344"
+"revision": "a96ff7db0b"
 }
 ]
