@@ -10781,7 +10781,7 @@
 "moz-box-group": 1,
 "moz-box-item": 3,
 "moz-box-link": 2,
-"moz-button": 151,
+"moz-button": 152,
 "moz-button-group": 51,
 "moz-card": 25,
 "moz-checkbox": 16,
@@ -10796,13 +10796,13 @@
 "moz-radio-group": 2,
 "moz-reorderable-list": 2,
 "moz-select": 1,
-"moz-support-link": 89,
+"moz-support-link": 87,
 "moz-toggle": 21,
 "moz-visual-picker": 2,
 "named-deck": 5,
 "panel-list": 14
 },
 "date": "2025-10-07",
-"revision": "c25e07ef5b"
+"revision": "054e2b0727"
 }
 ]
