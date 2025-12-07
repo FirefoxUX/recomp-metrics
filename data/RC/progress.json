@@ -12421,5 +12421,39 @@
 },
 "date": "2025-12-05",
 "revision": "72d1fd14e6"
+},
+{
+"data": {
+"moz-badge": 2,
+"moz-box-button": 3,
+"moz-box-group": 2,
+"moz-box-item": 7,
+"moz-box-link": 2,
+"moz-button": 161,
+"moz-button-group": 55,
+"moz-card": 25,
+"moz-checkbox": 16,
+"moz-fieldset": 8,
+"moz-five-star": 3,
+"moz-input-color": 4,
+"moz-input-search": 16,
+"moz-input-text": 1,
+"moz-label": 3,
+"moz-message-bar": 40,
+"moz-page-header": 1,
+"moz-page-nav": 2,
+"moz-promo": 1,
+"moz-radio": 7,
+"moz-radio-group": 2,
+"moz-reorderable-list": 2,
+"moz-select": 1,
+"moz-support-link": 92,
+"moz-toggle": 19,
+"moz-visual-picker": 2,
+"named-deck": 5,
+"panel-list": 15
+},
+"date": "2025-12-06",
+"revision": "655ba8eaca"
 }
 ]
