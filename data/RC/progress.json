@@ -12557,5 +12557,39 @@
 },
 "date": "2025-12-09",
 "revision": "9e27f248e2"
+},
+{
+"data": {
+"moz-badge": 2,
+"moz-box-button": 3,
+"moz-box-group": 2,
+"moz-box-item": 7,
+"moz-box-link": 2,
+"moz-button": 162,
+"moz-button-group": 55,
+"moz-card": 26,
+"moz-checkbox": 16,
+"moz-fieldset": 8,
+"moz-five-star": 3,
+"moz-input-color": 4,
+"moz-input-search": 16,
+"moz-input-text": 1,
+"moz-label": 3,
+"moz-message-bar": 40,
+"moz-page-header": 1,
+"moz-page-nav": 2,
+"moz-promo": 1,
+"moz-radio": 7,
+"moz-radio-group": 2,
+"moz-reorderable-list": 2,
+"moz-select": 1,
+"moz-support-link": 92,
+"moz-toggle": 19,
+"moz-visual-picker": 2,
+"named-deck": 5,
+"panel-list": 16
+},
+"date": "2025-12-10",
+"revision": "04cf275823"
 }
 ]
