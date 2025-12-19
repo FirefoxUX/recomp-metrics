@@ -12801,11 +12801,11 @@
 "moz-badge": 2,
 "moz-box-button": 3,
 "moz-box-group": 2,
-"moz-box-item": 7,
+"moz-box-item": 11,
 "moz-box-link": 2,
-"moz-button": 164,
-"moz-button-group": 56,
-"moz-card": 26,
+"moz-button": 171,
+"moz-button-group": 57,
+"moz-card": 22,
 "moz-checkbox": 16,
 "moz-fieldset": 8,
 "moz-five-star": 3,
@@ -12821,13 +12821,13 @@
 "moz-radio-group": 2,
 "moz-reorderable-list": 2,
 "moz-select": 1,
-"moz-support-link": 91,
+"moz-support-link": 90,
 "moz-toggle": 20,
 "moz-visual-picker": 2,
 "named-deck": 5,
 "panel-list": 16
 },
 "date": "2025-12-18",
-"revision": "3959e0d60e"
+"revision": "dcbcf6b14a"
 }
 ]
