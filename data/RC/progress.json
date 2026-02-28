@@ -14885,16 +14885,18 @@
 {
 "data": {
 "moz-badge": 2,
-"moz-box-button": 3,
-"moz-box-item": 10,
+"moz-box-button": 5,
+"moz-box-group": 1,
+"moz-box-item": 12,
 "moz-box-link": 2,
-"moz-button": 199,
+"moz-button": 196,
 "moz-button-group": 61,
 "moz-card": 24,
-"moz-checkbox": 15,
-"moz-fieldset": 8,
+"moz-checkbox": 16,
+"moz-fieldset": 9,
 "moz-five-star": 3,
 "moz-input-color": 4,
+"moz-input-folder": 1,
 "moz-input-search": 17,
 "moz-input-text": 1,
 "moz-label": 3,
@@ -14906,13 +14908,13 @@
 "moz-radio-group": 2,
 "moz-reorderable-list": 2,
 "moz-select": 4,
-"moz-support-link": 94,
+"moz-support-link": 93,
 "moz-toggle": 20,
 "moz-visual-picker": 2,
 "named-deck": 5,
 "panel-list": 21
 },
 "date": "2026-02-27",
-"revision": "eb971e3da7"
+"revision": "34ea492016"
 }
 ]
