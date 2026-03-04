@@ -14989,7 +14989,7 @@
 },
 {
 "data": {
-"moz-badge": 2,
+"moz-badge": 3,
 "moz-box-button": 5,
 "moz-box-group": 1,
 "moz-box-item": 12,
@@ -15020,6 +15020,6 @@
 "panel-list": 21
 },
 "date": "2026-03-03",
-"revision": "eb7e47cd8b"
+"revision": "14b6884573"
 }
 ]
