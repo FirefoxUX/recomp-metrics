@@ -15126,5 +15126,40 @@
 },
 "date": "2026-03-07",
 "revision": "768652661f"
+},
+{
+"data": {
+"moz-badge": 3,
+"moz-box-button": 5,
+"moz-box-group": 1,
+"moz-box-item": 12,
+"moz-box-link": 2,
+"moz-button": 203,
+"moz-button-group": 61,
+"moz-card": 24,
+"moz-checkbox": 16,
+"moz-fieldset": 9,
+"moz-five-star": 3,
+"moz-input-color": 4,
+"moz-input-folder": 1,
+"moz-input-search": 17,
+"moz-input-text": 1,
+"moz-label": 3,
+"moz-message-bar": 44,
+"moz-page-header": 1,
+"moz-page-nav": 2,
+"moz-promo": 1,
+"moz-radio": 10,
+"moz-radio-group": 3,
+"moz-reorderable-list": 2,
+"moz-select": 4,
+"moz-support-link": 95,
+"moz-toggle": 20,
+"moz-visual-picker": 2,
+"named-deck": 5,
+"panel-list": 21
+},
+"date": "2026-03-08",
+"revision": "7b1a35d6c7"
 }
 ]
