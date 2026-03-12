@@ -15199,13 +15199,13 @@
 },
 {
 "data": {
-"moz-badge": 4,
+"moz-badge": 7,
 "moz-box-button": 5,
 "moz-box-group": 1,
 "moz-box-item": 11,
 "moz-box-link": 2,
-"moz-button": 205,
-"moz-button-group": 61,
+"moz-button": 208,
+"moz-button-group": 62,
 "moz-card": 24,
 "moz-checkbox": 16,
 "moz-fieldset": 9,
@@ -15215,7 +15215,7 @@
 "moz-input-search": 17,
 "moz-input-text": 1,
 "moz-label": 3,
-"moz-message-bar": 44,
+"moz-message-bar": 45,
 "moz-page-header": 1,
 "moz-page-nav": 2,
 "moz-promo": 1,
@@ -15230,6 +15230,6 @@
 "panel-list": 21
 },
 "date": "2026-03-11",
-"revision": "8aceb30399"
+"revision": "7095e662ee"
 }
 ]
