@@ -15414,7 +15414,7 @@
 "moz-box-group": 1,
 "moz-box-item": 11,
 "moz-box-link": 2,
-"moz-button": 212,
+"moz-button": 213,
 "moz-button-group": 62,
 "moz-card": 25,
 "moz-checkbox": 16,
@@ -15440,6 +15440,6 @@
 "panel-list": 21
 },
 "date": "2026-03-20",
-"revision": "a729ef7f53"
+"revision": "a0503ac3a1"
 }
 ]
