@@ -16734,7 +16734,7 @@
 "moz-box-item": 15,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 248,
+"moz-button": 247,
 "moz-button-group": 64,
 "moz-card": 25,
 "moz-checkbox": 17,
@@ -16760,6 +16760,6 @@
 "panel-list": 36
 },
 "date": "2026-04-30",
-"revision": "fcf41d17df"
+"revision": "c1f215a640"
 }
 ]
