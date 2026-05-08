@@ -16950,7 +16950,7 @@
 "moz-box-item": 15,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 264,
+"moz-button": 265,
 "moz-button-group": 65,
 "moz-card": 26,
 "moz-checkbox": 18,
@@ -16976,6 +16976,6 @@
 "panel-list": 39
 },
 "date": "2026-05-07",
-"revision": "a358f48a49"
+"revision": "10725540f6"
 }
 ]
