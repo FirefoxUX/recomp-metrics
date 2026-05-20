@@ -17274,7 +17274,7 @@
 "moz-box-item": 16,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 278,
+"moz-button": 281,
 "moz-button-group": 66,
 "moz-card": 27,
 "moz-checkbox": 18,
@@ -17300,6 +17300,6 @@
 "panel-list": 39
 },
 "date": "2026-05-19",
-"revision": "ada2ab816a"
+"revision": "9c267d0a95"
 }
 ]
