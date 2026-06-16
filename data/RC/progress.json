@@ -18115,7 +18115,7 @@
 "moz-box-item": 16,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 301,
+"moz-button": 302,
 "moz-button-group": 66,
 "moz-card": 28,
 "moz-checkbox": 16,
@@ -18130,7 +18130,7 @@
 "moz-message-bar": 50,
 "moz-page-header": 1,
 "moz-page-nav": 4,
-"moz-promo": 4,
+"moz-promo": 5,
 "moz-radio": 10,
 "moz-radio-group": 3,
 "moz-reorderable-list": 2,
@@ -18142,6 +18142,6 @@
 "panel-list": 42
 },
 "date": "2026-06-15",
-"revision": "3bbb4eeba8"
+"revision": "ac8f36a953"
 }
 ]
