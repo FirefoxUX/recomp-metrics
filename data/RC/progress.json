@@ -18226,8 +18226,8 @@
 "moz-box-item": 16,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 304,
-"moz-button-group": 66,
+"moz-button": 313,
+"moz-button-group": 67,
 "moz-card": 28,
 "moz-checkbox": 16,
 "moz-fieldset": 8,
@@ -18236,7 +18236,7 @@
 "moz-input-folder": 1,
 "moz-input-password": 5,
 "moz-input-search": 21,
-"moz-input-text": 4,
+"moz-input-text": 5,
 "moz-label": 7,
 "moz-message-bar": 50,
 "moz-page-header": 1,
@@ -18253,6 +18253,6 @@
 "panel-list": 42
 },
 "date": "2026-06-19",
-"revision": "f1dbee2440"
+"revision": "cb02e3b15a"
 }
 ]
