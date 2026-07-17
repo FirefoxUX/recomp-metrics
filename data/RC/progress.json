@@ -19053,8 +19053,8 @@
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
 "moz-button": 338,
-"moz-button-group": 70,
-"moz-card": 33,
+"moz-button-group": 71,
+"moz-card": 32,
 "moz-checkbox": 19,
 "moz-fieldset": 9,
 "moz-five-star": 3,
@@ -19081,6 +19081,6 @@
 "panel-list": 47
 },
 "date": "2026-07-16",
-"revision": "ad248604ee"
+"revision": "446c6e609d"
 }
 ]
