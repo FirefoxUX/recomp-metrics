@@ -19496,7 +19496,7 @@
 "moz-input-color": 4,
 "moz-input-folder": 1,
 "moz-input-password": 5,
-"moz-input-search": 23,
+"moz-input-search": 24,
 "moz-input-text": 12,
 "moz-input-url": 2,
 "moz-label": 7,
@@ -19517,6 +19517,6 @@
 "panel-list": 50
 },
 "date": "2026-07-29",
-"revision": "ca6e949368"
+"revision": "d573d849c0"
 }
 ]
