@@ -19727,7 +19727,7 @@
 "moz-box-item": 18,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 387,
+"moz-button": 392,
 "moz-button-group": 71,
 "moz-card": 33,
 "moz-checkbox": 20,
@@ -19735,12 +19735,12 @@
 "moz-five-star": 3,
 "moz-input-color": 4,
 "moz-input-folder": 1,
-"moz-input-password": 5,
+"moz-input-password": 6,
 "moz-input-search": 24,
-"moz-input-text": 12,
-"moz-input-url": 2,
+"moz-input-text": 13,
+"moz-input-url": 3,
 "moz-label": 7,
-"moz-message-bar": 53,
+"moz-message-bar": 52,
 "moz-page-header": 1,
 "moz-page-nav": 4,
 "moz-promo": 6,
@@ -19748,7 +19748,7 @@
 "moz-radio-group": 3,
 "moz-reorderable-list": 2,
 "moz-segmented-control": 3,
-"moz-select": 19,
+"moz-select": 21,
 "moz-support-link": 90,
 "moz-textarea": 2,
 "moz-toggle": 45,
@@ -19757,6 +19757,6 @@
 "panel-list": 50
 },
 "date": "2026-08-06",
-"revision": "02e25036dc"
+"revision": "b1be8e55fb"
 }
 ]
