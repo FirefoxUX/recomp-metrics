@@ -20151,12 +20151,12 @@
 "moz-select": 21,
 "moz-support-link": 90,
 "moz-textarea": 2,
-"moz-toggle": 45,
+"moz-toggle": 44,
 "moz-visual-picker": 3,
 "named-deck": 5,
-"panel-list": 50
+"panel-list": 53
 },
 "date": "2026-08-18",
-"revision": "c2abcdc7f1"
+"revision": "b0bc20aac4"
 }
 ]
