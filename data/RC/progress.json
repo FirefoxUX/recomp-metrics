@@ -20887,7 +20887,7 @@
 "moz-box-item": 20,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 423,
+"moz-button": 421,
 "moz-button-group": 76,
 "moz-card": 33,
 "moz-checkbox": 22,
@@ -20907,7 +20907,7 @@
 "moz-radio": 10,
 "moz-radio-group": 3,
 "moz-reorderable-list": 2,
-"moz-segmented-control": 4,
+"moz-segmented-control": 5,
 "moz-select": 17,
 "moz-support-link": 90,
 "moz-textarea": 1,
@@ -20917,6 +20917,6 @@
 "panel-list": 58
 },
 "date": "2026-09-11",
-"revision": "14ed0c687a"
+"revision": "b14ad10e3f"
 }
 ]
