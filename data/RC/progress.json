@@ -21007,7 +21007,7 @@
 "moz-box-item": 19,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 427,
+"moz-button": 430,
 "moz-button-group": 76,
 "moz-card": 34,
 "moz-checkbox": 22,
@@ -21034,9 +21034,9 @@
 "moz-toggle": 47,
 "moz-visual-picker": 3,
 "named-deck": 5,
-"panel-list": 58
+"panel-list": 59
 },
 "date": "2026-09-16",
-"revision": "8d76a2ba4c"
+"revision": "6399208a6b"
 }
 ]
