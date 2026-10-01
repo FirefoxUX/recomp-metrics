@@ -21447,16 +21447,16 @@
 "moz-box-item": 19,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 440,
+"moz-button": 426,
 "moz-button-group": 77,
 "moz-card": 34,
-"moz-checkbox": 22,
+"moz-checkbox": 21,
 "moz-fieldset": 10,
 "moz-five-star": 3,
 "moz-input-color": 4,
 "moz-input-folder": 1,
 "moz-input-password": 6,
-"moz-input-search": 26,
+"moz-input-search": 25,
 "moz-input-text": 17,
 "moz-input-url": 2,
 "moz-label": 7,
@@ -21471,12 +21471,12 @@
 "moz-select": 17,
 "moz-support-link": 88,
 "moz-textarea": 1,
-"moz-toggle": 38,
+"moz-toggle": 36,
 "moz-visual-picker": 3,
 "named-deck": 5,
-"panel-list": 59
+"panel-list": 58
 },
 "date": "2026-09-30",
-"revision": "f384c89fc9"
+"revision": "f0ce2dc6c1"
 }
 ]
