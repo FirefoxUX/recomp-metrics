@@ -22369,7 +22369,7 @@
 "moz-breadcrumb-group": 1,
 "moz-button": 432,
 "moz-button-group": 79,
-"moz-card": 44,
+"moz-card": 45,
 "moz-checkbox": 21,
 "moz-fieldset": 11,
 "moz-five-star": 3,
@@ -22397,6 +22397,6 @@
 "panel-list": 62
 },
 "date": "2026-10-30",
-"revision": "ad04bdb66f"
+"revision": "9fcf3a1690"
 }
 ]
