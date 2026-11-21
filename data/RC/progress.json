@@ -22967,8 +22967,8 @@
 "moz-box-item": 20,
 "moz-box-link": 2,
 "moz-breadcrumb-group": 1,
-"moz-button": 481,
-"moz-button-group": 80,
+"moz-button": 483,
+"moz-button-group": 81,
 "moz-card": 45,
 "moz-checkbox": 17,
 "moz-fieldset": 11,
@@ -22991,12 +22991,12 @@
 "moz-select": 18,
 "moz-support-link": 78,
 "moz-textarea": 2,
-"moz-toggle": 43,
+"moz-toggle": 44,
 "moz-visual-picker": 4,
 "named-deck": 5,
 "panel-list": 65
 },
 "date": "2026-11-20",
-"revision": "e655b43d68"
+"revision": "893a7ba9f7"
 }
 ]
